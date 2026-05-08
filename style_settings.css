@@ -361,11 +361,5 @@ button {
 
 /* svg */
 
-svg:not(:root) {
-    overflow-clip-margin: content-box;
-    overflow: hidden;
-}
 
-:not(svg) {
-    transform-origin: 0px 0px;
-}
+
