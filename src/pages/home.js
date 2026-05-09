@@ -18,8 +18,8 @@ function App() {
         <Route path="/sideBar" element={<SideBar />} />
         <Route path="/landing" element={<Landing />} />
         <Route path="/features" element={<Features />} />
-        <Route path="/numbers" element={<Numbers />} />
         <Route path="/reviews" element={<Reviews />} />
+        <Route path="/numbers" element={<Numbers />} />
          <Route path="/footer" element={<Footer />} />
       </Routes>
     </Router>
