@@ -1,15 +1,18 @@
-<!DOCTYPE! html>
-<html lang="en" style>
-    
-    <body>
-        <div id="__next">
+const Settings = () => {
+    return (
+        <>
+<div id="__next">
             <div class="wrapper">
                 <div class="search__background">
-                    <div class="search__wrapper"><figure><img src="logo" alt=""></figure>
+                    <div class="search__wrapper">
+                        <figure>
+                            <img src="logo" alt="" />
+                        </figure>
                     <div class="search__content">
                         <div class="search">
                             <div class="search__input--wrapper">
-                                <input class="search__input" placeholder="Search for books" type="text" value="">
+                                <input class="search__input" placeholder="Search for books" type="text" value=""/> 
+                                
                                 <div class="search__icon">
                                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0 0 11.6 0l43.6-43.5a8.2 8.2 0 0 0 0-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z"></path>
@@ -28,7 +31,7 @@
                                                 <div class="sidebar__overlay sidebar__overlay--hidden"></div>
                                                 <div class="sidebar sidebar--closed">
                                                     <div class="sidebar__logo">
-                                                        <img alt="" srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.1b1c490b.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.1b1c490b.png&amp;w=1080&amp;q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.1b1c490b.png&amp;w=1080&amp;q=75" width="495" height="114" decoding="async" data-nimg="1" loading="lazy" style="color:transparent"></div>
+                                                        <img alt="" srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.1b1c490b.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.1b1c490b.png&amp;w=1080&amp;q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.1b1c490b.png&amp;w=1080&amp;q=75" width="495" height="114" decoding="async" data-nimg="1" loading="lazy" style="color:transparent"></img></div>
                                                         <div class="sidebar__wrapper">
                                                             <div class="sidebar__top">
                                                                 <a class="sidebar__link--wrapper" href="/for-you">
@@ -56,7 +59,7 @@
                                                                                                     <path fill="none" d="M0 0h24v24H0z"></path>
                                                                                                     <path d="M17.849 11.808l-.707-.707-9.9 9.9H3v-4.243L14.313 5.444l5.657 5.657a1 1 0 0 1 0 1.414l-7.07 7.071-1.415-1.414 6.364-6.364zm-2.121-2.121l-1.415-1.414L5 17.586v1.415h1.414l9.314-9.314zm2.828-7.071l2.829 2.828a1 1 0 0 1 0 1.414L19.97 8.273 15.728 4.03l1.414-1.414a1 1 0 0 1 1.414 0z"></path>
                                                                                                     </g>
-                                                                                                    </svg>
+                                                                                                     </svg>
                                                                                                     </div>
                                                                                                     <div class="sidebar__link--text">Highlights</div>
                                                                                                     </div>
@@ -108,7 +111,7 @@
                                                                                                                                                             <div class="row">
                                                                                                                                                                 <div class="section__title page__title">Settings</div>
                                                                                                                                                                 <div class="settings__login--wrapper">
-                                                                                                                                                                    <img alt="login" srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogin.e313e580.png&amp;w=1080&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogin.e313e580.png&amp;w=3840&amp;q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogin.e313e580.png&amp;w=3840&amp;q=75" width="1033" height="712" decoding="async" data-nimg="1" loading="lazy" style="color: transparent;">
+                                                                                                                                                                    <img alt="login" srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogin.e313e580.png&amp;w=1080&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogin.e313e580.png&amp;w=3840&amp;q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogin.e313e580.png&amp;w=3840&amp;q=75" width="1033" height="712" decoding="async" data-nimg="1" loading="lazy" style="color: transparent;"/>
                                                                                                                                                                     <div class="settings__login--text">Log in to your account to see your details.</div>
                                                                                                                                                                     <button class="btn settings__login--btn">Login</button>
                                                                                                                                                                     </div>
@@ -116,60 +119,8 @@
                                                                                                                                                                     </div>
                                                                                                                                                                     </div>
                                                                                                                                                                     </div>
-                                                                                                                                                                    <script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/for-you","query":{},"buildId":"6z6IY5_2YOXUVENmlxcAN","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script>
-                                                                                                                                                                    <div id="give-freely-root-bcjindcccaagfpapjjmafapmmgkkhgoa" class="give-freely-root" data-extension-id="bcjindcccaagfpapjjmafapmmgkkhgoa" data-extension-name="JSON Formatter" style="display: block;">
-                                                                                                                                                                        <template shadowrootmode="open">
-                                                                                                                                                                            <style>
-  :host {
-    all: initial;
-  }
-
-  .gf-scroll-remove::-webkit-scrollbar {
-    border-bottom-right-radius: 15px;
-  }
-
-  button {
-    cursor: pointer;
-    transition: transform 0.1s ease;
-  }
-
-  button:active {
-    transform: scale(0.98);
-  }
-
-  .give-freely-close-button:hover {
-    opacity: 0.7;
-  }
-
-  input[type="radio"] {
-    margin-right: 8px;
-  }
-
-  hr {
-    border: none;
-    border-top: 1px solid #e5e5e5;
-    margin: 1em 0;
-  }
-
-  dialog::backdrop  {
-    background-color: revert;
-  }
-
-  dialog.backdrop-hidden::backdrop  {
-    background-color: transparent;
-  }
-</style>
-<div>
-    <div class="gf-app"></div>
-</div>
-</template>
-</div>
-<next-route-announcer>
-    <p aria-live="assertive" id="__next-route-announcer__" role="alert" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap; overflow-wrap: normal;">/settings</p>
-</next-route-announcer>
-<script src="/_next/static/chunks/pages/settings-550d2bc9a6b64a53.js"></script>
-<script src="/_next/static/chunks/pages/library-8a92c3a9274c750c.js"></script>
-<script src="/_next/static/chunks/d64684d8-0408bc6d6c2e38e1.js"></script>
-<script src="/_next/static/chunks/pages/book/%5Bid%5D-51e8d4b4d7a177f3.js"></script>
-</body>
-</html>
+                                                                                                                                                                    
+        </>
+    )
+}
+export default Settings
