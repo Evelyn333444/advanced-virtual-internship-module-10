@@ -33,7 +33,7 @@ const Settings = () => {
                                                 <div class="sidebar__overlay sidebar__overlay--hidden"></div>
                                                 <div class="sidebar sidebar--closed">
                                                     <div class="sidebar__logo">
-                                                        <img alt="" srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.1b1c490b.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.1b1c490b.png&amp;w=1080&amp;q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.1b1c490b.png&amp;w=1080&amp;q=75" width="495" height="114" decoding="async" data-nimg="1" loading="lazy" style="color:transparent"></img></div>
+                                                        <img alt="" srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.1b1c490b.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.1b1c490b.png&amp;w=1080&amp;q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.1b1c490b.png&amp;w=1080&amp;q=75" width="495" height="114" decoding="async" data-nimg="1" loading="lazy" style={{color:"transparent"}}></img></div>
                                                         <div class="sidebar__wrapper">
                                                             <div class="sidebar__top">
                                                                 <a class="sidebar__link--wrapper" href="/for-you">
