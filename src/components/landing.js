@@ -1,3 +1,6 @@
+import landingImg from "../assets/landing.png";
+import logo from "../assets/logo.png";
+
 const Landing = () => {
     return (
         <>
@@ -16,7 +19,7 @@ const Landing = () => {
                                     <button class="btn home__cta--btn">Login</button>
                                 </div>
                                 <figure class="landing__image--mask">
-                                    <img alt="landing" src="landing.png" width="779" height="740" decoding="async" data-nimg="1" loading="lazy" style={{ color: "transparent" }}/>
+                                   <img alt="landing" src={landingImg} width="779" height="740" loading="lazy" style={{ color: "transparent" }} />
                                 </figure>
                             </div>
                         </div>

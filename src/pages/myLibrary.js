@@ -8,7 +8,7 @@ const MyLibrary = () => {
                     <div classNameName="search__background">
                         <div classNameName="search__wrapper">
                             <figure>
-                                <img src="logo" alt=""/>
+                                <img src={logo} alt="logo" />
                                 </figure>
                                 <div classNameName="search__content">
                                     <div classNameName="search">

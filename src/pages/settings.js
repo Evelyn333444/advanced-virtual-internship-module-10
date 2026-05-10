@@ -8,7 +8,7 @@ const Settings = () => {
                 <div class="search__background">
                     <div class="search__wrapper">
                         <figure>
-                            <img src="logo" alt="" />
+                            <img src={logo} alt="logo" />
                         </figure>
                     <div class="search__content">
                         <div class="search">
@@ -113,7 +113,7 @@ const Settings = () => {
                                                                                                                                                             <div class="row">
                                                                                                                                                                 <div class="section__title page__title">Settings</div>
                                                                                                                                                                 <div class="settings__login--wrapper">
-                                                                                                                                                                    <img alt="login" srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogin.e313e580.png&amp;w=1080&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogin.e313e580.png&amp;w=3840&amp;q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogin.e313e580.png&amp;w=3840&amp;q=75" width="1033" height="712" decoding="async" data-nimg="1" loading="lazy" style="color: transparent;"/>
+                                                                                                                                                                    style={{ color: "transparent"}}
                                                                                                                                                                     <div class="settings__login--text">Log in to your account to see your details.</div>
                                                                                                                                                                     <button class="btn settings__login--btn">Login</button>
                                                                                                                                                                     </div>
