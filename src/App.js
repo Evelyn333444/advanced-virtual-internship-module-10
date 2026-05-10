@@ -3,6 +3,7 @@ import Home from './pages/home';
 import MyLibrary from './pages/myLibrary';
 import Settings from './pages/settings';
 import ForYou from './pages/forYou';
+import './App.css';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Route path="/library" element={<MyLibrary />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/forYou" element={<ForYou />} />
+        <Route path="/app.css" element={<App />} />
       </Routes>
     </div>
   );
