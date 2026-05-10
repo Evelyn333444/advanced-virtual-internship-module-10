@@ -16,7 +16,7 @@ const Landing = () => {
                                     <button class="btn home__cta--btn">Login</button>
                                 </div>
                                 <figure class="landing__image--mask">
-                                    <img alt="landing" src="/_next/static/media/landing.e4787d01.png" width="779" height="740" decoding="async" data-nimg="1" loading="lazy" style="color:transparent"/>
+                                    <img alt="landing" src="/_next/static/media/landing.e4787d01.png" width="779" height="740" decoding="async" data-nimg="1" loading="lazy" style={(color:transparent)}/>
                                 </figure>
                             </div>
                         </div>
