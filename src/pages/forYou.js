@@ -1,4 +1,4 @@
-
+import SideBar from '../components/sideBar'
 
 const ForYou = () => {
     return (
@@ -20,6 +20,9 @@ const ForYou = () => {
                                     </svg>
                                 </div>
                             </div>
+                        </div>
+                        <div>
+                            <SideBar
                         </div>
                         <div className="sidebar__toggle--btn">
                             <svg stroke="currentColor" fill="none" stroke="0" viewBox="0 0 15 15" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
