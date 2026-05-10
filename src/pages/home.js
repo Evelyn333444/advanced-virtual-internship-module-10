@@ -4,11 +4,13 @@ import Footer from '../components/footer'
 import Landing from '../components/landing'
 import Numbers from '../components/numbers'
 import Reviews from '../components/reviews'
+import LoginToggle from '../components/loginToggle'
 
 const Home = () => {
     return (
         <>
             <Nav />
+            <LogginToggle />
             <Landing />
             <Features />
             <Numbers />

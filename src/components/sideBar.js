@@ -1,3 +1,5 @@
+import logo from "../assets/logo.png";
+
 const SideBar = () => {
     return (
         <>

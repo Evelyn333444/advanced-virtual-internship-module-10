@@ -1,5 +1,5 @@
 import landingImg from "../assets/landing.png";
-import logo from "../assets/logo.png";
+
 
 const Landing = () => {
     return (

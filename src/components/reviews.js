@@ -1,4 +1,6 @@
-const Nav = () => {
+import LoginToggle from '../loginToggle'
+
+const Reviews = () => {
     return (
         <>
         <div class="row">
@@ -118,7 +120,8 @@ const Nav = () => {
                             </div>
                         </div>
                     </div>
+                    //<button onClick={LoginToggle}>Login</button>
         </>
     )
 }
-export default Nav
+export default Reviews

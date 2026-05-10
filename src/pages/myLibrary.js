@@ -1,4 +1,6 @@
 import SideBar from '../components/sideBar'
+import logo from "../assets/logo.png";
+import LoginToggle from '../loginToggle'
 
 const MyLibrary = () => {
     return (
