@@ -118,7 +118,7 @@ const Settings = () => {
                                                                                                                                                                 <div classNameName="settings__login--wrapper">
                                                                                                                                                                     style={{ color: "transparent"}}
                                                                                                                                                                     <div classNameName="settings__login--text">Log in to your account to see your details.</div>
-                                                                                                                                                                    <button classNameName="btn settings__login--btn">Login</button>
+                                                                                                                                                                    <button onClick={LoginToggle}>Login</button>
                                                                                                                                                                     </div>
                                                                                                                                                                     </div>
                                                                                                                                                                     </div>
