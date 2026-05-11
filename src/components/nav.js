@@ -1,5 +1,5 @@
 import logo from "../assets/logo.png";
-import LoginToggle from '../loginToggle'
+import LoginToggle from './LoginToggle'
 
 const Nav = () => {
     return (
@@ -9,7 +9,7 @@ const Nav = () => {
                         <img src={logo} alt="logo" />
                         </figure>
                         <ul className="nav__list--wrapper">
-                            <li className="nav__list nav__list--login" onClick={handleLoginToggle}>
+                            <li className="nav__list nav__list--login" onClick={LoginToggle}>
                             Login
                             </li>
                             <li className="nav__list nav__list--mobile">About</li>

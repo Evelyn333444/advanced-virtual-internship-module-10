@@ -1,6 +1,6 @@
 import logo from "../assets/logo.png";
-import LoginToggle from '../loginToggle'
-import SideBar from '../sideBar'
+import LoginToggle from '../components/LoginToggle'
+import SideBar from '../components/sideBar'
 
 const Settings = () => {
     return (

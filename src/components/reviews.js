@@ -1,4 +1,4 @@
-import LoginToggle from '../loginToggle'
+import LoginToggle from './LoginToggle'
 
 const Reviews = () => {
     return (
