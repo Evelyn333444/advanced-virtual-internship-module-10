@@ -1,0 +1,24 @@
+import Footer from '../components/footer'
+
+const Settings_Premium = () => {
+  return (
+    <>
+    <div className="container">
+        <div className="row">
+        <div className="section__title page__title">Settings</div>
+        <div className="setting__content">
+        <div className="settings__sub--title">Your Subscription plan</div>
+        <div className="settings__text">Premium</div>
+        </div>
+        <div className="setting__content">
+        <div className="settings__sub--title">Email</div>
+        <div className="settings__text">brackesb12@gmail.com</div>
+        //FIX THE EMAIL - ITS NOT HARDCODED TO MINE
+        </div>
+        </div>
+    </div>
+    </>
+  )
+}
+
+export default Settings_Premium
