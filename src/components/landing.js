@@ -1,7 +1,10 @@
 import landingImg from "../assets/landing.png";
+import { useState } from 'react'
+import LoginToggle from './LoginToggle'
 
 
 const Landing = () => {
+    const [ showLogin, setShowLogin ] = useState(false)
     return (
         <>
 
@@ -17,6 +20,7 @@ const Landing = () => {
                                         individuals who barely have time to read, <br class="remove--tablet"/>and even people who don’t like to read.
                                     </div>
                                     <button class="btn home__cta--btn">Login</button>
+                                    { showLogin && <LoginToggle onClose={() => setShowLogin(false)} />}
                                 </div>
                                 <figure class="landing__image--mask">
                                    <img alt="landing" src={landingImg} width="779" height="740" loading="lazy" style={{ color: "transparent" }} />

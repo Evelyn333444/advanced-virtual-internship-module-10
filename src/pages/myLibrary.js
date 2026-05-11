@@ -1,8 +1,10 @@
 import SideBar from '../components/sideBar'
 import logo from "../assets/logo.png";
 import LoginToggle from '../components/LoginToggle'
+import { useState } from 'react'
 
 const MyLibrary = () => {
+    const [ showLogin, setShowLogin ] = useState(false)
     return (
         <>
 <div id="__next">
@@ -44,6 +46,7 @@ const MyLibrary = () => {
                                                                                                                                                                                 <img alt="login" srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogin.e313e580.png&amp;w=1080&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogin.e313e580.png&amp;w=3840&amp;q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogin.e313e580.png&amp;w=3840&amp;q=75" width="1033" height="712" decoding="async" data-nimg="1" loading="lazy" style={{color: "transparent"}}/>
                                                                                                                                                                                 <div className="settings__login--text">Log in to your account to see your library.</div>
                                                                                                                                                                                 <button onClick={LoginToggle}>Login</button>
+                                                                                                                                                                                { showLogin && <LoginToggle onClose={() => setShowLogin(false)} />}
                                                                                                                                                                                 </div>
                                                                                                                                                                                 </div>
                                                                                                                                                                                 </div>

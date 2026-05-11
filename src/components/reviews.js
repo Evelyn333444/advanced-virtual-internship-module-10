@@ -1,6 +1,8 @@
 import LoginToggle from './LoginToggle'
+import { useState } from 'react'
 
 const Reviews = () => {
+    const [ showLogin, setShowLogin ] = useState(false)
     return (
         <>
         <div class="row">
@@ -117,6 +119,7 @@ const Reviews = () => {
                             </div>
                             <div class="reviews__btn--wrapper">
                                 <button class="btn home__cta--btn">Login</button>
+                                { showLogin && <LoginToggle onClose={() => setShowLogin(false)} />}
                             </div>
                         </div>
                     </div>

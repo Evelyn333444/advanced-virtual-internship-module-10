@@ -1,8 +1,10 @@
 import logo from "../assets/logo.png";
 import LoginToggle from '../components/LoginToggle'
 import SideBar from '../components/sideBar'
+import { useState } from 'react'
 
 const Settings = () => {
+    const [ showLogin, setShowLogin ] = useState(false)
     return (
         <>
 <div id="__next">
@@ -119,6 +121,7 @@ const Settings = () => {
                                                                                                                                                                     style={{ color: "transparent"}}
                                                                                                                                                                     <div classNameName="settings__login--text">Log in to your account to see your details.</div>
                                                                                                                                                                     <button onClick={LoginToggle}>Login</button>
+                                                                                                                                                                    { showLogin && <LoginToggle onClose={() => setShowLogin(false)} />}
                                                                                                                                                                     </div>
                                                                                                                                                                     </div>
                                                                                                                                                                     </div>
