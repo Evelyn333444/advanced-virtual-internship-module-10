@@ -613,6 +613,8 @@ button:disabled {
     height: 28px;
 }
 
+
+
 @media (max-width: 768px) {
   .landing__content {
     display: flex;
