@@ -1,7 +1,9 @@
 import SideBar from '../components/sideBar';
 import Footer from '../components/footer'
+import { useState } from 'react'
 
 const Upgrade_To_Premium = () => {
+     const [showUpgrade, setUpgrade] = useState(false);
   return (
     <>
     <div id="__next">
@@ -123,8 +125,8 @@ const Upgrade_To_Premium = () => {
                                                                                                                             </div>
                                                                                                                             </div>
                                                                                                                             </div>
-                                                                                                                            </div>
-                                                                                                                            </div>
+                                                                    
+                                                        
     </>
   )
 }

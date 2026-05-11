@@ -1,7 +1,9 @@
 import SideBar from '../components/sideBar';
 import Footer from '../components/footer'
+import { useState } from 'react'
 
 const Settings_No_Premium = () => {
+    const [showUpgrade, setUpgrade] = useState(false);
   return (
     <>
     <div id="__next">
@@ -114,7 +116,7 @@ const Settings_No_Premium = () => {
         <div className="section__title page__title">Settings</div>
         <div className="setting__content">
         <div className="settings__sub--title">Your Subscription plan</div>
-        <div className="settings__text">Premium</div>
+        <div className="settings__text" onClick={() => setUpgrade (true)}>Premium</div>
         <a className="btn settings__upgrade--btn" href="/choose-plan">Upgrade to Premium</a>
         </div>
         <div className="setting__content">
