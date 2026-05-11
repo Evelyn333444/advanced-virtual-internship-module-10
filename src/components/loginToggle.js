@@ -1,6 +1,8 @@
 import googleImg from "../assets/google.png";
 import { initializeApp } from 'firebase/app';
-import { useState } from 'react'
+import { useState } from 'react';
+import ForgotPass from './ForgotPass';
+import DontHaveAccount from './DontHaveAccount';
 
 
 const firebaseConfig = {
@@ -13,8 +15,9 @@ const firebaseConfig = {
 };
 const app = initializeApp(firebaseConfig);
 
-const LoginToggle = ({ onClose }) => {
-    const [ showLogin, setShowLogin ] = useState(false)
+const LoginToggle = () => {
+  const [showForgotPass, setShowForgotPass] = useState(false);
+  const [showDontAccount, setShowDontAccount] = useState(false);
     return (
         <>
 

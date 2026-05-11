@@ -3,7 +3,7 @@ import Home from './pages/home';
 import MyLibrary from './pages/myLibrary';
 import Settings from './pages/settings';
 import ForYou from './pages/forYou';
-import Style from './style.css';
+import './style.css'; // Correct way to import a stylesheet
 
 const App = () => {
   return (
@@ -13,7 +13,6 @@ const App = () => {
         <Route path="/library" element={<MyLibrary />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/forYou" element={<ForYou />} />
-        <Route path="/style.css" element={<Style />} />
       </Routes>
     </div>
   );
