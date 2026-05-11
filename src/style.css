@@ -521,6 +521,11 @@ button:disabled {
     left: 2px;
 }
 
+.google__icon--mask img {
+    width: 24px;
+    height: 24px;
+}
+
 .guest__icon--mask svg {
     width: 24px;
     height: 24px;
