@@ -19,7 +19,7 @@ const Landing = () => {
                                         Great summaries for busy people,<br class="remove--tablet"/>
                                         individuals who barely have time to read, <br class="remove--tablet"/>and even people who don’t like to read.
                                     </div>
-                                    <button class="btn home__cta--btn">Login</button>
+                                    <button class="btn home__cta--btn" onClick={() => setShowLogin(true)}>Login</button>
                                     { showLogin && <LoginToggle onClose={() => setShowLogin(false)} />}
                                 </div>
                                 <figure class="landing__image--mask">

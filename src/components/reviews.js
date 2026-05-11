@@ -118,12 +118,11 @@ const Reviews = () => {
                                 </div>
                             </div>
                             <div class="reviews__btn--wrapper">
-                                <button class="btn home__cta--btn">Login</button>
+                                <button class="btn home__cta--btn" onClick={() => setShowLogin(true)} >Login</button>
                                 { showLogin && <LoginToggle onClose={() => setShowLogin(false)} />}
                             </div>
                         </div>
                     </div>
-                    //<button onClick={LoginToggle}>Login</button>
         </>
     )
 }

@@ -16,6 +16,11 @@ input {
     outline: none;
 }
 
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
 form {
     display: block;
     margin-top: 0em;
