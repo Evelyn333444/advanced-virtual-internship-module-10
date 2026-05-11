@@ -16,6 +16,7 @@ const Nav = () => {
                             <li className="nav__list nav__list--mobile">Contact</li>
                             <li className="nav__list nav__list--mobile">Help</li>
                         </ul>
+                        <LoginToggle />
                     </div>
         </>
     )
