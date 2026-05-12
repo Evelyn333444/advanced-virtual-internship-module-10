@@ -3,21 +3,12 @@ import { signInWithGoogle } from "../firebase";
 
 const DontHaveAccount = ({ onClose }) => {
 
-    const handleGoogleSignUp = async () => {
-        try {
-            await signInWithGoogle();
-            onClose(); 
-        } catch (error) {
-            console.error("Error signing up with Google: ", error);
-        }
-    };
-
     return (
         <div className="auth__wrapper">
             <div className="auth">
                 <div className="auth__content">
                     <div className="auth__title">Sign up to Summarist</div>
-                    <button className="btn google__btn--wrapper" onClick={handleGoogleSignUp}>
+                    <button className="btn google__btn--wrapper" >
                         <figure className="google__icon--mask">
                             <img alt="google" src={googleImg} />
                         </figure>
