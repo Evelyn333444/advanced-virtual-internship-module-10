@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import auth from './firebase';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import Home from './pages/home';
-import MyLibrary from './pages/myLibrary';
 import Settings from './pages/settings';
 import ForYou from './pages/forYou';
 import './style.css';
@@ -35,7 +34,6 @@ const App = () => {
         {user ? (
           <>
             <Route path="/" element={<ForYou user={user} />} />
-            <Route path="/library" element={<MyLibrary />} />
             <Route path="/settings" element={<Settings handleLogout={handleLogout} />} />
             <Route path="/foryou" element={<ForYou user={user} />} />
           </>

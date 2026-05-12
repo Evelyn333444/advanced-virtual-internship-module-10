@@ -4,13 +4,13 @@ import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 // Your web app's Firebase configuration
 // IMPORTANT: Replace with your own Firebase project details
 const firebaseConfig = {
-apiKey: "AIzaSyDiCCAT9keirOzZ59GmHJEY5HkvdEAfQEc",
-  authDomain: "advanced-virtual-interns-aee75.firebaseapp.com",
-  projectId: "advanced-virtual-interns-aee75",
-  storageBucket: "advanced-virtual-interns-aee75.firebasestorage.app",
-  messagingSenderId: "252353104950",
-  appId: "1:252353104950:web:a0b1e3d5105c072a861c97"
-}
+  apiKey: "AIzaSyDAsLI17iTTFLuD_B59XhwwmlyuxAzZ0Y4",
+  authDomain: "summarist-clone-f8875.firebaseapp.com",
+  projectId: "summarist-clone-f8875",
+  storageBucket: "summarist-clone-f8875.firebasestorage.app",
+  messagingSenderId: "277073466194",
+  appId: "1:277073466194:web:4f236544fc0d4ca714608b"
+};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

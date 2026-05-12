@@ -132,3 +132,6 @@ const Upgrade_To_Premium = () => {
 }
 
 export default Upgrade_To_Premium
+
+//This page shows when you have selected the green button that says 'Premium' on the settings_no_premium page
+//It doesnt have a search bar or sidebar
