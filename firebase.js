@@ -22,3 +22,4 @@ export const signInWithGoogle = () => {
 };
 
 export default auth;
+export const auth = getAuth(app);
