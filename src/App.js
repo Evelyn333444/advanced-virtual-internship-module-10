@@ -47,6 +47,8 @@ const App = () => {
             <Route path="/" element={<ForYou user={user} />} />
             <Route path="/settings" element={<Settings handleLogout={handleLogout} />} />
             <Route path="/foryou" element={<ForYou user={user} />} />
+
+
           </>
         ) : (
           <Route path="/" element={<Home />} />

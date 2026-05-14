@@ -18,7 +18,7 @@ const Nav = () => {
                             <li className="nav__list nav__list--mobile">Contact</li>
                             <li className="nav__list nav__list--mobile">Help</li>
                         </ul>
-                        { showLogin && <loginToggle onClose={() => setShowLogin(false)} />}
+                        { showLogin && <LoginToggle onClose={() => setShowLogin(false)} />}
                     </div>
         </>
     )
