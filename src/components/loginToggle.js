@@ -1,36 +1,27 @@
 import googleImg from "../assets/google.png";
 import { useState } from 'react';
 import { signInWithGoogle, auth } from "../firebase";
-import { signInWithGoogle } from "../firebase";
 import { signInAnonymously } from "firebase/auth";
 import ForgotPass from "./ForgotPass";
 import DontHaveAccount from "./DontHaveAccount";
+import { useNavigate } from "react-router-dom";
+
+
 
 const LoginToggle = ({ onClose }) => {
     const [showForgotPass, setShowForgotPass] = useState(false);
     const [showDontAccount, setShowDontAccount] = useState(false);
-
-
-
-    const handleGoogleLogin = async () => {
-        try {
-            await signInWithGoogle();
-            onClose();
-        } catch (error) {
-            console.error("Error signing in with Google: ", error);
-            // Handle login error (e.g., show a notification to the user)
-        }
-    };
+    const navigate = useNavigate();
 
     const handleGuestLogin = async () => {
-        try {
-            const result = await signInAnonymously(auth);
-            console.log(result.user);
-            
-        } catch(error) {
-            console.error(error.message)
-        }
-    }
+  try {
+    await signInAnonymously(auth);
+    onClose();
+    navigate("/");
+  } catch (error) {
+    console.error(error.message);
+  }
+};
 
     return (
         <div className="auth__wrapper">
@@ -48,7 +39,7 @@ const LoginToggle = ({ onClose }) => {
                     <div className="auth__separator">
                         <span className="auth__separator--text">or</span>
                     </div>
-                    <button className="btn google__btn--wrapper" onClick={handleGoogleLogin}>
+                    <button className="btn google__btn--wrapper" >
                         <figure className="google__icon--mask">
                             <img alt="google" src={googleImg} loading="lazy" style={{ color: "transparent" }} />
                         </figure>
