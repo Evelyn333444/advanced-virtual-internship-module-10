@@ -1,4 +1,4 @@
-import LoginToggle from './LoginToggle'
+import LoginToggle from './loginToggle'
 import { useState } from 'react'
 
 const Reviews = () => {

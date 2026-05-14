@@ -1,6 +1,6 @@
 import landingImg from "../assets/landing.png";
 import { useState } from 'react'
-import LoginToggle from './LoginToggle'
+import LoginToggle from './loginToggle'
 
 
 const Landing = () => {

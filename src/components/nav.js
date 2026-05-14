@@ -1,5 +1,5 @@
 import logo from "../assets/logo.png";
-import LoginToggle from './LoginToggle'
+import LoginToggle from './loginToggle'
 import { useState } from 'react'
 
 const Nav = () => {
@@ -18,7 +18,7 @@ const Nav = () => {
                             <li className="nav__list nav__list--mobile">Contact</li>
                             <li className="nav__list nav__list--mobile">Help</li>
                         </ul>
-                        { showLogin && <LoginToggle onClose={() => setShowLogin(false)} />}
+                        { showLogin && <loginToggle onClose={() => setShowLogin(false)} />}
                     </div>
         </>
     )

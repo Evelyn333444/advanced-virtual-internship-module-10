@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import SideBar from '../components/sideBar'
 import Search from '../components/search'
-import LoginToggle from '../components/LoginToggle'
+import LoginToggle from '../components/loginToggle'
 
 const MyLibrary = () => {
   const [showLogin, setShowLogin] = useState(false)
