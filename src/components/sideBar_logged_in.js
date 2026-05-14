@@ -6,9 +6,9 @@ const SideBarLoggedIn = () => {
 <div className="sidebar sidebar--closed">
 <div className="sidebar__logo">
 <img alt="" srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.1b1c490b.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.1b1c490b.png&amp;w=1080&amp;q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.1b1c490b.png&amp;w=1080&amp;q=75" width="495" height="114" decoding="async" data-nimg="1" loading="lazy" style={{color:"transparent"}}/></div>
-<div classNameName="sidebar__wrapper">
-<div classNameName="sidebar__top">
-<a classNameName="sidebar__link--wrapper" href="/for-you">
+<div className="sidebar__wrapper">
+<div className="sidebar__top">
+<a className="sidebar__link--wrapper" href="/for-you">
 <div className="sidebar__link--line active--tab"></div>
 <div className="sidebar__icon--wrapper">
 <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">

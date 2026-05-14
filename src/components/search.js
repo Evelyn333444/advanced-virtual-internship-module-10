@@ -2,7 +2,7 @@ import React from 'react';
 
 const Search = () => {
   return (
-    <div classNameName="search__background">
+    <div className="search__background">
         <div className="search__wrapper">
             <figure>
                 <img src="logo" alt=""/>
