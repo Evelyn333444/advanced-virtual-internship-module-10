@@ -1,5 +1,6 @@
 import googleImg from "../assets/google.png";
 import { useState } from 'react';
+import { signInWithGoogle, auth } from "../firebase";
 import { signInWithGoogle } from "../firebase";
 import { signInAnonymously } from "firebase/auth";
 import ForgotPass from "./ForgotPass";
@@ -23,8 +24,8 @@ const LoginToggle = ({ onClose }) => {
 
     const handleGuestLogin = async () => {
         try {
-            const resullt = await signInAnonymously(auth);
-            console.log(result.user)
+            const result = await signInAnonymously(auth);
+            console.log(result.user);
             
         } catch(error) {
             console.error(error.message)
