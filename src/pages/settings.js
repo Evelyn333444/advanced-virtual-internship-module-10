@@ -10,7 +10,7 @@ const Settings = () => {
     <div id="__next">
     <div className="wrapper">
     <Search />
-    <Sidebar />
+    <SideBar />
         </div>
         </div>
         <div className="container">
@@ -23,11 +23,12 @@ const Settings = () => {
         </div>
         <div className="setting__content">
         <div className="settings__sub--title">Email</div>
-        <div className="settings__text">brackesb12@gmail.com</div>
-        //FIX THIS, ITS NOT SUPPOSED TO BE HARDCODED
+        <div className="settings__text">user.email</div>
+        
         </div>
         </div>
         </div>
+        <Footer />
     </>
   )
 }
