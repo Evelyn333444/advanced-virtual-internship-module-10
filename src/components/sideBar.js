@@ -15,6 +15,7 @@ const SideBar = () => {
                                                 <div class="sidebar sidebar--closed">
                                                     <div class="sidebar__logo">
                                                         <img src={logo} alt="logo" />
+                                                        </div>
                         <div className="sidebar__top">
                             <a className="sidebar__link--wrapper" href="/foryou">
                                 <div className="sidebar__link--line "></div>
@@ -89,7 +90,6 @@ const SideBar = () => {
                                 <div className="sidebar__link--text">Login</div>
                             </div>
                         </div>
-                    </div>
                     </div>
                  </>
                      )
