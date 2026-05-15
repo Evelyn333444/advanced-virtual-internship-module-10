@@ -1,8 +1,9 @@
 import SideBar from '../components/sideBar';
 import Footer from '../components/footer'
 import { useState } from 'react'
+import pricingTop from '../assets/pricing-top.png';
 
-const Upgrade_To_Premium = () => {
+const UpgradeToPremium = () => {
      const [showUpgrade, setUpgrade] = useState(false);
   return (
     <>
@@ -14,7 +15,7 @@ const Upgrade_To_Premium = () => {
     <div className="plan__title">Get unlimited access to many amazing books to read</div>
     <div className="plan__sub--title">Turn ordinary moments into amazing learning opportunities</div>
     <figure className="plan__img--mask">
-    <img alt="pricing" srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpricing-top.4d86e93a.png&amp;w=1080&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpricing-top.4d86e93a.png&amp;w=1920&amp;q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpricing-top.4d86e93a.png&amp;w=1920&amp;q=75" width="860" height="722" decoding="async" data-nimg="1" loading="lazy" style={{color: "transparent"}} />
+    <img alt="pricing" src={pricingTop} />
     </figure>
     </div>
     </div>
@@ -131,7 +132,7 @@ const Upgrade_To_Premium = () => {
   )
 }
 
-export default Upgrade_To_Premium
+export default UpgradeToPremium
 
 //This page shows when you have selected the green button that says 'Premium' on the settings_no_premium page
 //It doesnt have a search bar or sidebar

@@ -1041,14 +1041,14 @@ search, .search__input--wrapper {
     position: relative;
     text-align: center;
     width: 100%;
-    padding-top: 48px;
+  padding-top: 16px;
     margin-bottom: 24px;
 }
 
 .plan__header {
     max-width: 1000px;
     margin: 0 auto;
-    color: #fff;
+    
     padding: 0 24px;
 }
 
@@ -1061,15 +1061,6 @@ search, .search__input--wrapper {
 .plan__sub--title {
     font-size: 20px;
     margin-bottom: 32px;
-}
-
-.plan__img--mask {
-    display: flex;
-    justify-content: center;
-    max-width: 340px;
-    margin: 0 auto;
-    border-radius: 180px 180px 0 0;
-    overflow: hidden;
 }
 
 .plan__img--mask {
