@@ -5,6 +5,7 @@ import { onAuthStateChanged, signOut } from 'firebase/auth';
 import Home from './pages/home';
 import Settings from './pages/settings';
 import ForYou from './pages/forYou';
+import UpgradeToPremium from './pages/upgrade_to_premium';
 import './style.css';
 import Loginhandler from './components/LoginHandler'
 import SignUpHandler from './components/signUpHandler'
@@ -46,6 +47,7 @@ const App = () => {
           <>
             <Route path="/" element={<ForYou user={user} />} />
             <Route path="/settings" element={<Settings handleLogout={handleLogout} />} />
+            <Route path="/choose-plan" element={<UpgradeToPremium />} />
             <Route path="/foryou" element={<ForYou user={user} />} />
 
 

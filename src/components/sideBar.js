@@ -5,7 +5,8 @@ const SideBarLoggedIn = () => {
         <>
 <div className="sidebar sidebar--closed">
 <div className="sidebar__logo">
-<img alt="" srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.1b1c490b.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.1b1c490b.png&amp;w=1080&amp;q=75 2x" src="logo.png"/></div>
+<img alt="logo" src={logo} />
+</div>
 <div className="sidebar__wrapper">
 <div className="sidebar__top">
 <a className="sidebar__link--wrapper" href="/foryou">
