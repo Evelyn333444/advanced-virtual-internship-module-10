@@ -1,10 +1,16 @@
 import SideBar from '../components/sideBar';
 import Search from '../components/search';
 import Footer from '../components/footer'
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 const Settings = () => {
     const [showUpgrade, setUpgrade] = useState(false);
+  // Define a user object with initial values
+  const [user, setUser] = useState({
+    name: "",
+email: "",
+role: ""
+  });
   return (
     <>
     <div id="__next">
@@ -23,7 +29,7 @@ const Settings = () => {
         </div>
         <div className="setting__content">
         <div className="settings__sub--title">Email</div>
-        <div className="settings__text">user.email</div>
+        <div className="settings__text"><p>{user.email}</p></div>
         
         </div>
         </div>
