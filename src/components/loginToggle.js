@@ -1,7 +1,7 @@
 import googleImg from "../assets/google.png";
 import { useState } from 'react';
 import { signInWithGoogle, auth } from "../firebase";
-import { signInAnonymously } from "firebase/auth";
+import { signInAnonymously, signInWithEmailAndPassword } from "firebase/auth";
 import ForgotPass from "./ForgotPass";
 import DontHaveAccount from "./DontHaveAccount";
 import { useNavigate } from "react-router-dom";
@@ -13,15 +13,95 @@ const LoginToggle = ({ onClose }) => {
     const [showDontAccount, setShowDontAccount] = useState(false);
     const navigate = useNavigate();
 
-    const handleGuestLogin = async () => {
-  try {
-    await signInAnonymously(auth);
-    onClose();
-    navigate("/");
-  } catch (error) {
-    console.error(error.message);
-  }
+        const [email, setEmail] = useState('');
+        const [password, setPassword] = useState('');
+        const [loading, setLoading] = useState(false);
+        const [errorMsg, setErrorMsg] = useState('');
+        const [emailError, setEmailError] = useState('');
+        const [passwordError, setPasswordError] = useState('');
+
+        const validateEmail = (value) => {
+            const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(".+"))@(([^<>()[\]\\.,;:\s@\"]+\.)+[^<>()[\]\\.,;:\s@\"]{2,})$/i;
+            return re.test(String(value).toLowerCase());
+        }
+
+        const handleGuestLogin = async () => {
+    try {
+        setLoading(true);
+        await signInAnonymously(auth);
+        setLoading(false);
+        onClose();
+        navigate("/");
+    } catch (error) {
+        setLoading(false);
+        console.error(error.message);
+        setErrorMsg(firebaseErrorMessage(error.code, error.message));
+    }
 };
+
+        const handleEmailLogin = async (e) => {
+            e.preventDefault();
+            setErrorMsg('');
+            let valid = true;
+            if (!validateEmail(email)) {
+                setEmailError('Please enter a valid email address');
+                valid = false;
+            }
+            if (!password || password.length < 6) {
+                setPasswordError('Password must be at least 6 characters');
+                valid = false;
+            }
+            if (!valid) return;
+
+            try {
+                setLoading(true);
+                await signInWithEmailAndPassword(auth, email, password);
+                setLoading(false);
+                onClose();
+                navigate('/');
+            } catch (error) {
+                setLoading(false);
+                setErrorMsg(firebaseErrorMessage(error.code, error.message));
+            }
+        };
+
+        const handleGoogleLogin = async () => {
+                try {
+                        setLoading(true);
+                        await signInWithGoogle();
+                        setLoading(false);
+                        onClose();
+                        navigate('/');
+                } catch (error) {
+                        setLoading(false);
+                setErrorMsg(firebaseErrorMessage(error.code, error.message));
+                }
+        };
+
+        const firebaseErrorMessage = (code, fallback) => {
+            switch (code) {
+                case 'auth/user-not-found':
+                    return 'No account found with that email.';
+                case 'auth/wrong-password':
+                    return 'Incorrect password. Please try again.';
+                case 'auth/invalid-email':
+                    return 'Please enter a valid email address.';
+                case 'auth/too-many-requests':
+                    return 'Too many attempts. Please try again later.';
+                case 'auth/network-request-failed':
+                    return 'Network error. Check your internet connection.';
+                case 'auth/popup-closed-by-user':
+                    return 'Sign-in popup was closed before completing.';
+                case 'auth/popup-blocked':
+                    return 'Popup blocked by browser. Allow popups and try again.';
+                case 'auth/user-disabled':
+                    return 'This user account has been disabled.';
+                case 'auth/invalid-password':
+                    return 'Password is invalid.';
+                default:
+                    return fallback || 'Authentication failed. Please try again.';
+            }
+        };
 
     return (
         <div className="auth__wrapper">
@@ -39,7 +119,7 @@ const LoginToggle = ({ onClose }) => {
                     <div className="auth__separator">
                         <span className="auth__separator--text">or</span>
                     </div>
-                    <button className="btn google__btn--wrapper" >
+                    <button className="btn google__btn--wrapper" onClick={handleGoogleLogin}>
                         <figure className="google__icon--mask">
                             <img alt="google" src={googleImg} loading="lazy" style={{ color: "transparent" }} />
                         </figure>
@@ -48,12 +128,15 @@ const LoginToggle = ({ onClose }) => {
                     <div className="auth__separator">
                         <span className="auth__separator--text">or</span>
                     </div>
-                    <form className="auth__main--form">
-                        <input className="auth__main--input" type="text" placeholder="Email Address" />
-                        <input className="auth__main--input" type="password" placeholder="Password" />
-                        <button className="btn">
-                            <span>Login</span>
+                    <form className="auth__main--form" onSubmit={handleEmailLogin}>
+                        <input className="auth__main--input" type="email" placeholder="Email Address" value={email} onChange={(e) => { setEmail(e.target.value); setEmailError(validateEmail(e.target.value) ? '' : 'Please enter a valid email address'); }} />
+                        {emailError && <div style={{color: '#c53030', marginTop: 6}}>{emailError}</div>}
+                        <input className="auth__main--input" type="password" placeholder="Password" value={password} onChange={(e) => { setPassword(e.target.value); setPasswordError(e.target.value.length >= 6 ? '' : 'Password must be at least 6 characters'); }} />
+                        {passwordError && <div style={{color: '#c53030', marginTop: 6}}>{passwordError}</div>}
+                        <button className="btn" type="submit" disabled={loading || emailError || passwordError || !email || !password}>
+                            <span>{loading ? 'Logging in...' : 'Login'}</span>
                         </button>
+                        {errorMsg && <div style={{color: '#c53030', marginTop: 8}}>{errorMsg}</div>}
                     </form>
                 </div>
                 <div className="auth__forgot--password" onClick={() => setShowForgotPass(true)}>Forgot your password?</div>
