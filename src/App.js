@@ -22,21 +22,18 @@ const App = () => {
   }, []);
 
   const handleLogout = () => {
-
-  signOut(auth);
-
-};
-
+    signOut(auth);
+  };
 
   return (
     <div className="App">
       <Routes>
         {user ? (
           <>
-            <Route path="/" element={<ForYou user={user} />} />
+            <Route path="/" element={<ForYou user={user} handleLogout={handleLogout} />} />
             <Route path="/settings" element={<Settings handleLogout={handleLogout} />} />
             <Route path="/choose-plan" element={<UpgradeToPremium />} />
-            <Route path="/foryou" element={<ForYou user={user} />} />
+            <Route path="/foryou" element={<ForYou user={user} handleLogout={handleLogout} />} />
 
 
           </>

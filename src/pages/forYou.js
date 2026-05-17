@@ -2,7 +2,7 @@ import React from 'react';
 import SideBar from '../components/sideBar';
 import Search from '../components/search';
 
-const ForYou = ({ user }) => {
+const ForYou = ({ user, handleLogout }) => {
   // Check if user is null or undefined before trying to access its properties
   const userName = user ? (user.displayName || user.email) : 'Guest';
 
@@ -10,7 +10,7 @@ const ForYou = ({ user }) => {
     <div id="__next">
       <div className="wrapper">
         <Search />
-        <SideBar />
+        <SideBar handleLogout={handleLogout} />
         <div className="row">
           <div className="container">
             <div className="row">

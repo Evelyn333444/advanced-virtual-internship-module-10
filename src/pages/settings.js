@@ -17,7 +17,7 @@ const Settings = ({ handleLogout }) => {
             <div id="__next">
                 <div className="wrapper">
                     <Search />
-                    <SideBar />
+                    <SideBar handleLogout={handleLogout} />
                     <div className="row">
                         <div className="container">
                             <div className="section__title page__title">Settings</div>

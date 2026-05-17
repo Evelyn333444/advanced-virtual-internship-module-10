@@ -1,6 +1,6 @@
 import logo from "../assets/logo.png";
 
-const SideBarLoggedIn = () => {
+const SideBarLoggedIn = ({ handleLogout = () => {} }) => {
     return (
         <>
 <div className="sidebar sidebar--closed">
@@ -69,7 +69,7 @@ const SideBarLoggedIn = () => {
         </div>
         <div className="sidebar__link--text">Help &amp; Support</div>
         </div>
-        <div className="sidebar__link--wrapper">
+                <div className="sidebar__link--wrapper" onClick={handleLogout} style={{ cursor: 'pointer' }}>
             <div className="sidebar__link--line "></div>
             <div className="sidebar__icon--wrapper">
                 <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
