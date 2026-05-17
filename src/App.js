@@ -21,23 +21,11 @@ const App = () => {
     return () => unsubscribe();
   }, []);
 
-  const handleLogout =  () => { signOut(auth);
-    return (
-    <div>
-      {user ? (
-        <>
-          <Sidebar />
-          <button onClick={handleLogout}>Log Out</button>
-        </>
-      ) : (
-        <>
-          <Loginhandler />
-          <SignUpHandler />
-        </>
-      )}
-    </div>
-  );
-  };
+  const handleLogout = () => {
+
+  signOut(auth);
+
+};
 
 
   return (

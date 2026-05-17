@@ -1134,7 +1134,7 @@ search, .search__input--wrapper {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    padding: 24px;
+    padding: 16px;
     background-color: #fff;
     border: none;
     border-radius: 4px;
@@ -1222,9 +1222,13 @@ search, .search__input--wrapper {
 }
 
 .accordion__card {
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 8px;
+    max-width: 600px;
+    margin: 0 auto 16px;
     overflow: hidden;
+    background-color: #ffffff;
+    border: 1px solid #e6ecef;
+    border-radius: 4px;
+    display: block;
 }
 
 .accordion__header {
@@ -1232,17 +1236,18 @@ search, .search__input--wrapper {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    padding: 24px 0;
+    padding: 28px 24px;
     gap: 8px;
+    min-height: 280px;
 }
 
 .accordion__title {
-    font-weight: 500;
-    font-size: 24px;
+    font-weight: 600;
+    font-size: 18px;
     position: relative;
     margin-bottom: 0;
     color: #032b41;
-    transition: .3s;
+    transition: transform .25s ease;
 }
 
 .accordion__icon--rotate {
@@ -1253,7 +1258,7 @@ search, .search__input--wrapper {
     width: 24px;
     min-width: 24px;
     height: 24px;
-    transition: transform .3s;
+    transition: transform .25s ease;
 }
 
 .collapse.show {
@@ -1269,7 +1274,7 @@ search, .search__input--wrapper {
 
 .accordion__body {
     min-height: 1px;
-    padding-bottom: 24px;
+    padding: 24px 32px 32px;
     color: #394547;
     line-height: 1.5;
 }
@@ -1279,9 +1284,32 @@ search, .search__input--wrapper {
 }
 
 .accordion__card {
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 8px;
+    max-width: 600px;
+    margin: 0 auto 16px;
     overflow: hidden;
+    background-color: #ffffff;
+    border: 1px solid #e6ecef;
+    border-radius: 4px;
+    display: block;
+}
+
+@media (min-width: 1024px) {
+  .accordion__header {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .accordion__header {
+    min-height: 240px;
+  }
+}
+
+@media (max-width: 767px) {
+  .accordion__header {
+    min-height: 180px;
+    padding: 20px 16px;
+  }
 }
 
 @media (max-width: 1200px) {
