@@ -1,4 +1,4 @@
-import { Routes, Route  } from 'react-router-dom';
+import { Routes, Route, useNavigate  } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { auth } from "./firebase";
 import { onAuthStateChanged, signOut } from 'firebase/auth';
@@ -21,9 +21,12 @@ const App = () => {
     return () => unsubscribe();
   }, []);
 
+  const navigate = useNavigate();
   const handleLogout = () => {
-    signOut(auth);
-  };
+    signOut(auth).then(() => {
+        navigate("/");
+    });
+};
 
   return (
     <div className="App">
