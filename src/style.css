@@ -1246,6 +1246,19 @@ search, .search__input--wrapper {
     border: 1px solid #e6ecef;
     border-radius: 4px;
     display: block;
+    padding-bottom: calc(var(--spacing) * 16);
+    padding-top: calc(var(--spacing) * 8);
+    padding-inline: calc(var(--spacing) * 6);
+    max-width: 600px;
+    margin-inline: auto;
+}
+
+.faq__wrapper {
+  padding-bottom: calc(var(--spacing) * 16);
+    padding-top: calc(var(--spacing) * 8);
+    padding-inline: calc(var(--spacing) * 6);
+    max-width: 600px;
+    margin-inline: auto;
 }
 
 .accordion__header {
@@ -1256,11 +1269,6 @@ search, .search__input--wrapper {
     padding: 28px 24px;
     gap: 8px;
     min-height: 280px;
-    padding-bottom: calc(var(--spacing) * 16);
-    padding-top: calc(var(--spacing) * 8);
-    padding-inline: calc(var(--spacing) * 6);
-    max-width: 600px;
-    margin-inline: auto;
 }
 
 .accordion__title {
