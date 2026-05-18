@@ -1,4 +1,6 @@
-bookMap.map((item, index) => (
+{bookMap.length ? (
+            <OwlCarousel className="owl-theme" {...options}></OwlCarousel>
+{bookMap.map((item, index) => (
 <a
                         className="for-you__recommended--books-link"
                         href="/book/5bxl50cz4bt"
@@ -67,3 +69,5 @@ bookMap.map((item, index) => (
                       </a>
 )
 )
+}
+}
