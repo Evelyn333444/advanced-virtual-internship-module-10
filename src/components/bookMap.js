@@ -15,6 +15,11 @@ const BookMap = ({ bookMap, loading }) => {
           className="for-you__recommended--books-link"
           to={`/book/${item.id}`}
         >
+            
+            {item.subscriptionRequired && (
+  <div className="book__pill">Premium</div>
+)}
+
           <figure className="book__image--wrapper" style={{ marginBottom: "8px" }}>
             <img
               className="book__image"
