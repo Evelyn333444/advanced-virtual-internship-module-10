@@ -2,7 +2,7 @@
   <OwlCarousel className="owl-theme" {...options}>
     {bookMap.map((item, index) => (
       <a
-        key={index}
+        key={index} // Ensure each item has a unique key
         className="for-you__recommended--books-link"
         href={`/book/${item.id}`}
       >
@@ -18,14 +18,11 @@
         <div className="recommended__book--author">{item.author}</div>
         <div className="recommended__book--sub-title">{item.subTitle}</div>
         <div className="recommended__book--details-wrapper">
-          <div className="recommended__book--details">
-            <div className="recommended__book--details-text">{item.duration}</div>
-          </div>
-          <div className="recommended__book--details">
-            <div className="recommended__book--details-text">{item.averageRating}</div>
-          </div>
+          <div className="recommended__book--details">{item.details}</div>
         </div>
       </a>
     ))}
   </OwlCarousel>
-) : null}
+) : (
+  <p>No books available.</p> // Fallback if bookMap is empty
+)}

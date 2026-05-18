@@ -24,6 +24,7 @@ const DontHaveAccount = ({ onClose }) => {
             await signInWithGoogle();
             
         } catch (error) {
+            setError(error.message); // Set the error message to show to the user
             console.error("Google sign up error:", error.message);
         }
     };
@@ -33,6 +34,7 @@ const DontHaveAccount = ({ onClose }) => {
             <div className="auth">
                 <div className="auth__content">
                     <div className="auth__title">Sign up to Summarist</div>
+                    {error && <div className="auth__error">{error}</div>} {/* Display error message */}
                     <button className="btn google__btn--wrapper" onClick={handleGoogleSignUp}>
                         <figure className="google__icon--mask">
                             <img alt="google" src={googleImg} />
