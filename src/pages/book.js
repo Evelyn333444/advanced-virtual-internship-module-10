@@ -36,8 +36,6 @@ const Book = () => {
         <div id="__next">
         <div className="wrapper">
         <Search />
-        </div>
-        </div>
         <div className="row">
         <audio controls src={book.audioLink}></audio>
         <div className="container">
@@ -129,6 +127,9 @@ const Book = () => {
                 </figure>
                 </div>
                 </div>
+                </div>
+                </div>
+                <SideBar />
                 </div>
                 </div>
         </>
