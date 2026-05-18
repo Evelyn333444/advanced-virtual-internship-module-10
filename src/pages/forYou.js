@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import SideBar from '../components/sideBar';
 import Search from '../components/search';
-import bookMap from '../components/bookMap';
+import BookMap from '../components/bookMap';
 import Skeleton from '../components/skeleton';
 
 const ForYou = ({ user, handleLogout }) => {
