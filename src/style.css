@@ -1069,7 +1069,7 @@ search, .search__input--wrapper {
     border-bottom-right-radius: 16rem;
     border-bottom-left-radius: 16rem;
     color: #fff;
-    height: 70%;
+    height: 100%;
 }
 
 .plan__header {

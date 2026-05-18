@@ -18,12 +18,22 @@ const DontHaveAccount = ({ onClose }) => {
         }
     };
 
-    return (
+    // Function to handle Google sign-up
+    const handleGoogleSignUp = async () => {
+        try {
+            await signInWithGoogle();
+            
+        } catch (error) {
+            console.error("Google sign up error:", error.message);
+        }
+    };
+
+     return (
         <div className="auth__wrapper">
             <div className="auth">
                 <div className="auth__content">
                     <div className="auth__title">Sign up to Summarist</div>
-                    <button className="btn google__btn--wrapper">
+                    <button className="btn google__btn--wrapper" onClick={handleGoogleSignUp}>
                         <figure className="google__icon--mask">
                             <img alt="google" src={googleImg} />
                         </figure>
@@ -33,17 +43,31 @@ const DontHaveAccount = ({ onClose }) => {
                         <span className="auth__separator--text">or</span>
                     </div>
                     <form className="auth__main--form" onSubmit={handleSignUp}>
-                        <input className="auth__main--input" type="email" placeholder="Email Address" value={email} onChange={(e) => setEmail(e.target.value)} />
-                        <input className="auth__main--input" type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                        <input 
+                        className="auth__main--input" 
+                            type="email" 
+                            placeholder="Email Address" 
+                            value={email} 
+                            onChange={(e) => setEmail(e.target.value)} 
+                        />
+                        <input 
+                            className="auth__main--input" 
+                            type="password" 
+                            placeholder="Password" 
+                            value={password} 
+                            onChange={(e) => setPassword(e.target.value)} 
+                        />
                         <button className="btn" type="submit">
                             <span>Sign up</span>
                         </button>
                     </form>
+                    
                 </div>
                 <button className="auth__switch--btn" onClick={onClose}>Already have an account?</button>
             </div>
         </div>
     );
+    
 }
 
 export default DontHaveAccount;
