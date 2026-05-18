@@ -32,8 +32,8 @@ const [recommended, setRecommended] = useState([]);
 const [suggested, setSuggested] = useState([]);
 
 useEffect (() => {
-    fetchData()
-    fetchData2()
+    fetchData().then(data => setSuggested(data));
+  fetchData2().then(data => setRecommended(data));
 }, [])
 
 
