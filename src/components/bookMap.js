@@ -1,5 +1,7 @@
+import MyComponent from "./MyComponent"
+
 {bookMap.length ? (
-            <OwlCarousel className="owl-theme" {...options}></OwlCarousel>
+    <OwlCarousel className="owl-theme" {...options}></OwlCarousel>
 {bookMap.map((item, index) => (
 <a
                         className="for-you__recommended--books-link"
@@ -10,7 +12,7 @@
                           className="book__image--wrapper"
                           style={{ marginBottom: "8px" }}
                         >
-                        {loading ? (
+                        {MyComponent ? (
                         <Skeleton width="150px" height="150px" borderRadius="50%" />
                         ) : (
                           <img
@@ -71,8 +73,6 @@
                           </div>
                         </div>
                       </a>
-                    )
-                )
-            }
-        
-    }
+                    ))}
+        <OwlCarousel />
+                 null}
