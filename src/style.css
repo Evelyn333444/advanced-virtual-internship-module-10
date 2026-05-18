@@ -1238,26 +1238,24 @@ search, .search__input--wrapper {
     text-align: center;
 }
 
-.accordion__card {
-    max-width: 600px;
-    margin: 0 auto 16px;
-    overflow: hidden;
-    background-color: #ffffff;
-    border: 1px solid #e6ecef;
-    border-radius: 4px;
+hr {
     display: block;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    color: gray;
+    unicode-bidi: isolate;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
 }
 
-.faq__wrapper {
-  padding-bottom: calc(var(--spacing) * 16);
-    padding-top: calc(var(--spacing) * 8);
-    padding-inline: calc(var(--spacing) * 6);
-    max-width: 600px;
-    margin-inline: auto;
-    justify-content: space-between;
+.accordion__card {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 8px;
+    overflow: hidden;
 }
-
-
 
 .accordion__header {
     display: flex;
@@ -1269,12 +1267,12 @@ search, .search__input--wrapper {
 }
 
 .accordion__title {
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: 24px;
     position: relative;
     margin-bottom: 0;
     color: #032b41;
-    transition: transform .25s ease;
+    transition: transform .3s ease;
 }
 
 .accordion__icon--rotate {
