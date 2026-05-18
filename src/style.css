@@ -1065,6 +1065,11 @@ search, .search__input--wrapper {
     width: 100%;
   padding-top: 16px;
     margin-bottom: 24px;
+    background-color: #032b41;
+    border-bottom-right-radius: 16rem;
+    border-bottom-left-radius: 16rem;
+    color: #fff;
+    height: 70%;
 }
 
 .plan__header {
