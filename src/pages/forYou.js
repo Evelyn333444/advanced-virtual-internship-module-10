@@ -1,6 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import SideBar from '../components/sideBar';
 import Search from '../components/search';
+import Skeleton from '../components/skeleton';
+import MyComponent from '../components/MyComponent';
 
 const ForYou = ({ user, handleLogout }) => {
   // Check if user is null or undefined before trying to access its properties
@@ -26,10 +28,14 @@ async function fetchData2() {
   return data;
 }
 
+const [recommended, setRecommended] = useState([]);
+const [suggested, setSuggested] = useState([]);
+
 useEffect (() => {
     fetchData()
     fetchData2()
 }, [])
+
 
   return (
     <div id="__next">
@@ -48,7 +54,11 @@ useEffect (() => {
             <div className="selected__book--line"></div>
             <div className="selected__book--content">
             <figure className="book__image--wrapper" style={{height: "140px", width: "140px", minWidth: "140px"}}>
+                {MyComponent ? (
+                        <Skeleton width="150px" height="150px" borderRadius="50%" />
+                ) : (
             <img className="book__image" src="https://firebasestorage.googleapis.com/v0/b/summaristt.appspot.com/o/books%2Fimages%2Fthe-lean-startup.png?alt=media&amp;token=087bb342-71d9-4c07-8b0d-4dd1f06a5aa2" alt="book" style={{display: "block"}}/>
+                )}
             </figure>
             <div className="selected__book--text">
             <div className="selected__book--title">The Lean Startup</div>
@@ -71,7 +81,11 @@ useEffect (() => {
             <a className="for-you__recommended--books-link" href="/book/5bxl50cz4bt">
             <audio src="https://firebasestorage.googleapis.com/v0/b/summaristt.appspot.com/o/books%2Faudios%2Fhow-to-win-friends-and-influence-people.mp3?alt=media&amp;token=60872755-13fc-43f4-8b75-bae3fcd73991"></audio>
             <figure className="book__image--wrapper" style={{marginBottom: "8px"}}>
+                {MyComponent ? (
+                        <Skeleton width="150px" height="150px" borderRadius="50%" />
+                ) : (
             <img className="book__image" src="https://firebasestorage.googleapis.com/v0/b/summaristt.appspot.com/o/books%2Fimages%2Fhow-to-win-friends-and-influence-people.png?alt=media&amp;token=099193aa-4d85-4e22-8eb7-55f12a235fe2" alt="book" style={{display: "block"}}/>
+                )}
             </figure>
             <div className="recommended__book--title">How to Win Friends and Influence People in the Digital Age</div>
             <div className="recommended__book--author">Dale Carnegie</div>

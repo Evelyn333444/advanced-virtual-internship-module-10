@@ -1264,9 +1264,8 @@ search, .search__input--wrapper {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    padding: 28px 24px;
+    padding: 24px 0;
     gap: 8px;
-    min-height: 280px;
 }
 
 .accordion__title {

@@ -10,22 +10,26 @@
                           className="book__image--wrapper"
                           style={{ marginBottom: "8px" }}
                         >
+                        {loading ? (
+                        <Skeleton width="150px" height="150px" borderRadius="50%" />
+                        ) : (
                           <img
                             className="book__image"
                             src="https://firebasestorage.googleapis.com/v0/b/summaristt.appspot.com/o/books%2Fimages%2Fhow-to-win-friends-and-influence-people.png?alt=media&amp;token=099193aa-4d85-4e22-8eb7-55f12a235fe2"
                             alt="book"
                             style={{ display: "block" }}
                           />
+                        )}
                         </figure>
                         <div className="recommended__book--title">
-                          //How to Win Friends and Influence People in the Digital
-                          //Age
+                          
+                          
                         </div>
                         <div className="recommended__book--author">
-                          //Dale Carnegie
+                          
                         </div>
                         <div className="recommended__book--sub-title">
-                          //Time-tested advice for the digital age
+                          
                         </div>
                         <div className="recommended__book--details-wrapper">
                           <div className="recommended__book--details">
@@ -44,7 +48,7 @@
                               </svg>
                             </div>
                             <div className="recommended__book--details-text">
-                              //03:24
+
                             </div>
                           </div>
                           <div className="recommended__book--details">
@@ -67,7 +71,8 @@
                           </div>
                         </div>
                       </a>
-)
-)
-}
-}
+                    )
+                )
+            }
+        
+    }
