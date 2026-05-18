@@ -1,3 +1,24 @@
+import React, { useState, useEffect } from 'react';
+import OwlCarousel from 'react-owl-carousel'; // make sure you have this package installed
+import { fetchBooks } from '../api'; // hypothetical function to fetch books
+import { Link } from 'react-router-dom'; // Ensure you're importing Link from react-router-dom
+
+
+const BookCarousel = () => {
+    const [bookMap, setBookMap] = useState([]); // Initialize bookMap as an empty array
+    const options = {}; // You can customize your OwlCarousel options here
+
+    // Fetch books when the component mounts
+    useEffect(() => {
+        const getBooks = async () => {
+            const books = await fetchBooks(); // Fetching books
+            setBookMap(books); // Set the fetched books to state
+        };
+        getBooks();
+    }, []); // Empty dependency array means this runs once when the component mounts
+
+    return (
+        <>
 
 {bookMap.length ? (
   <OwlCarousel className="owl-theme" {...options}>
@@ -27,3 +48,6 @@
 ) : (
   <p>No books available.</p> // Fallback if bookMap is empty
 )}
+</>
+    );
+};

@@ -7,6 +7,7 @@ import { signInWithGoogle } from "../firebase";
 const DontHaveAccount = ({ onClose }) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [error, setError] = useState(""); // Step 1: Define error state
 
     const handleSignUp = async (e) => {
         e.preventDefault();

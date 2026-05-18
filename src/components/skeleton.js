@@ -1,4 +1,4 @@
-const SkeletonLoader = () => {
+const Skeleton = () => {
     return (
         <div className="skeleton-loader">
             <div className="skeleton-book">
@@ -10,3 +10,5 @@ const SkeletonLoader = () => {
         </div>
     );
 };
+
+export default Skeleton
