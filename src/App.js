@@ -10,7 +10,7 @@ import './style.css';
 import Loginhandler from './components/LoginHandler'
 import SignUpHandler from './components/signUpHandler'
 import Sidebar from './components/sideBar'
-
+import Book from './pages/book';
 
 
 const App = () => {

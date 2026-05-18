@@ -1,9 +1,11 @@
 import SideBar from '../components/sideBar';
 import Search from '../components/search';
-
-const { id } = useParams();
+import { useParams } from 'react-router-dom';
+import { useState, useEffect} from 'react';
+import React from 'react';
 
 const Book = () => {
+    const { id } = useParams();
     return(
         <>
         <div id="__next">
@@ -81,17 +83,17 @@ const Book = () => {
         <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"></path>
         </svg>
         </div>
-        <div classNameName="inner-book__bookmark--text">Add title to My Library</div>
+        <div className="inner-book__bookmark--text">Add title to My Library</div>
         </div>
-        <div classNameName="inner-book__secondary--title">What's it about?</div>
-        <div classNameName="inner-book__tags--wrapper">
-        <div classNameName="inner-book__tag">null</div>
+        <div className="inner-book__secondary--title">What's it about?</div>
+        <div className="inner-book__tags--wrapper">
+        <div className="inner-book__tag">null</div>
         </div>
-        <div classNameName="inner-book__book--description">null</div>
-        <h2 classNameName="inner-book__secondary--title">About the author</h2>
-        <div classNameName="inner-book__author--description">null</div>
+        <div className="inner-book__book--description">null</div>
+        <h2 className="inner-book__secondary--title">About the author</h2>
+        <div className="inner-book__author--description">null</div>
         </div>
-        <div classNameName="inner-book--img-wrapper">
+        <div className="inner-book--img-wrapper">
             <figure className="book__image--wrapper" style="height: 300px; width: 300px; min-width: 300px;">
                 <img className="book__image" src="">
                 </img>
