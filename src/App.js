@@ -11,23 +11,7 @@ import Loginhandler from './components/LoginHandler'
 import SignUpHandler from './components/signUpHandler'
 import Sidebar from './components/sideBar'
 
-const API_URL= "https://us-central1-summaristt.cloudfunctions.net/getBooks?status=suggested"
-//Suggested books
 
-async function fetchData() {
-  const response = await fetch(`https://us-central1-summaristt.cloudfunctions.net/getBooks?status=suggested.com{apiKey}`);
-  const data = await response.json();
-  return data;
-}
-
-const API_URL1= "https://us-central1-summaristt.cloudfunctions.net/getBooks?status=recommended"
-//Recommended books
-
-async function fetchData() {
-  const response = await fetch(`https://us-central1-summaristt.cloudfunctions.net/getBooks?status=recommended.com{apiKey}`);
-  const data = await response.json();
-  return data;
-}
 
 const App = () => {
   const [user, setUser] = useState(null);

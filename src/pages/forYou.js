@@ -1,10 +1,35 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import SideBar from '../components/sideBar';
 import Search from '../components/search';
 
 const ForYou = ({ user, handleLogout }) => {
   // Check if user is null or undefined before trying to access its properties
   const userName = user ? (user.displayName || user.email) : 'Guest';
+
+const API_URL= "https://us-central1-summaristt.cloudfunctions.net/getBooks?status=suggested"
+//Suggested books
+
+async function fetchData() {
+  const response = await fetch(API_URL);
+  const data = await response.json();
+  console.log(data)
+  return data;
+}
+
+const API_URL2= "https://us-central1-summaristt.cloudfunctions.net/getBooks?status=recommended"
+//Recommended books
+
+async function fetchData2() {
+  const response = await fetch(API_URL2);
+  const data = await response.json();
+  console.log(data)
+  return data;
+}
+
+useEffect (() => {
+    fetchData()
+    fetchData2()
+}, [])
 
   return (
     <div id="__next">
