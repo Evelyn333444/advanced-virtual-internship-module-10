@@ -1318,6 +1318,32 @@ hr {
     display: block;
 }
 
+/* Skeleton */
+
+skeleton-loader {
+    display: flex;
+    flex-direction: column;
+}
+
+.skeleton-book {
+    margin-bottom: 16px;
+}
+
+.skeleton-image {
+    width: 100px; /* Adjust according to your layout */
+    height: 150px; /* Adjust according to your layout */
+    background-color: #e0e0e0; /* Light gray for skeleton */
+    border-radius: 4px;
+}
+
+.skeleton-title,
+.skeleton-author {
+    height: 20px;
+    background-color: #e0e0e0; 
+    margin-top: 8px; /* Space out the text */
+    border-radius: 4px;
+}
+
 @media (min-width: 1024px) {
   .accordion__header {
     min-height: 280px;

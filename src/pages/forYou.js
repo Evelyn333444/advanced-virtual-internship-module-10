@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import SideBar from '../components/sideBar';
 import Search from '../components/search';
-import MyComponent from '../components/MyComponent';
 import bookMap from '../components/bookMap';
+import Skeleton from '../components/skeleton';
 
 const ForYou = ({ user, handleLogout }) => {
   // Check if user is null or undefined before trying to access its properties
@@ -31,6 +31,23 @@ async function fetchData2() {
 const [recommended, setRecommended] = useState([]);
 const [suggested, setSuggested] = useState([]);
 
+const [bookMap, setBookMap] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+useEffect(() => {
+        const fetchBooks = async () => {
+            // Simulating a fetch call
+            setTimeout(() => {
+                // This would be replaced with your actual fetch call
+                setBookMap([{ id: 1, title: "Book Title", author: "Author Name", imageLink: "image.jpg" }]);
+                setLoading(false);
+            }, 2000); // Simulating a 2-second loading time
+        };
+
+        fetchBooks();
+    }, []);
+
+
 useEffect (() => {
     fetchData().then(data => setSuggested(data));
   fetchData2().then(data => setRecommended(data));
@@ -54,7 +71,7 @@ useEffect (() => {
             <div className="selected__book--line"></div>
             <div className="selected__book--content">
             <figure className="book__image--wrapper" style={{height: "140px", width: "140px", minWidth: "140px"}}>
-                {MyComponent ? (
+                {loading ? (
                         <Skeleton width="150px" height="150px" borderRadius="50%" />
                 ) : (
             <img className="book__image" src="https://firebasestorage.googleapis.com/v0/b/summaristt.appspot.com/o/books%2Fimages%2Fthe-lean-startup.png?alt=media&amp;token=087bb342-71d9-4c07-8b0d-4dd1f06a5aa2" alt="book" style={{display: "block"}}/>

@@ -1,7 +1,8 @@
+
 {bookMap.length ? (
   <OwlCarousel className="owl-theme" {...options}>
     {bookMap.map((item, index) => (
-      <a
+      <Link
         key={index} // Ensure each item has a unique key
         className="for-you__recommended--books-link"
         href={`/book/${item.id}`}
@@ -20,7 +21,7 @@
         <div className="recommended__book--details-wrapper">
           <div className="recommended__book--details">{item.details}</div>
         </div>
-      </a>
+      </Link>
     ))}
   </OwlCarousel>
 ) : (
