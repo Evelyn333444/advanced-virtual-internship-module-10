@@ -39,6 +39,7 @@ const App = () => {
             <Route path="/settings" element={<Settings handleLogout={handleLogout} />} />
             <Route path="/choose-plan" element={<UpgradeToPremium />} />
             <Route path="/foryou" element={<ForYou user={user} handleLogout={handleLogout} />} />
+            <Route path="/book/:id" element={<Book />} />
 
 
           </>
