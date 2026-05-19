@@ -1,14 +1,28 @@
-import SideBarFontChange from '../components/sideBarFontChange'
-import Search from '../components/search'
-import { useParams } from 'react-router-dom';
-import React, { useState, useEffect } from 'react';
+import SideBarFontChange from "../components/sideBarFontChange";
+import Search from "../components/search";
+import { useParams } from "react-router-dom";
+import React, { useState, useEffect, useRef } from "react";
+import AudioPlayer from "../components/audioPlayer";
 
 const ReadButtonSummary = () => {
-    const { id } = useParams();
-     const [book, setBook] = useState(null);
-     const [loading, setLoading] = useState(true);
+  const { id } = useParams();
+  const [book, setBook] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(null);
 
-useEffect(() => {
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
+
+  function handleTimeUpdate() {
+    setCurrentTime(audioRef.current.currentTime);
+  }
+
+  function handleLoadedMetadata() {
+    setDuration(audioRef.current.duration);
+  }
+
+  useEffect(() => {
     async function fetchBook() {
       const response = await fetch(
         `https://us-central1-summaristt.cloudfunctions.net/getBook?id=${id}`
@@ -23,64 +37,145 @@ useEffect(() => {
     fetchBook();
   }, [id]);
 
-    if (!book) {
-  return <div>Loading...</div>;
-}
-    return (
-        <>
-        <div id="__next">
+  if (!book) {
+    return <div>Loading...</div>;
+  }
+  return (
+    <>
+      <div id="__next">
         <div className="wrapper">
-        <div className="summary">
-            <div className="audio__book--summary" style={{fontSize: "16px"}}>
-                <div className="audio__book--summary-title">
-                    <b>{book.title}</b>
-                    </div>
-                    <div className="audio__book--summary-text">{book.summary}</div>
-                    </div>
-                    <div className="audio__wrapper">
- <audio src="https://firebasestorage.googleapis.com/v0/b/summaristt.appspot.com/o/books%2Faudios%2Fhow-to-win-friends-and-influence-people.mp3?alt=media&amp;token=60872755-13fc-43f4-8b75-bae3fcd73991"></audio><div className="audio__track--wrapper"><figure className="audio__track--image-mask"><figure className="book__image--wrapper" style={{height: "48px", width: "48px", minWidth: "48px"}}>
- <img className="book__image" src="https://firebasestorage.googleapis.com/v0/b/summaristt.appspot.com/o/books%2Fimages%2Fhow-to-win-friends-and-influence-people.png?alt=media&amp;token=099193aa-4d85-4e22-8eb7-55f12a235fe2" alt="book" style={{display: "block"}}></img></figure>
- </figure>
- <div className="audio__track--details-wrapper">
-    <div className="audio__track--title">{book.title}</div>
-    <div className="audio__track--author">{book.author}</div>
-    </div>
-    </div>
-    <div className="audio__controls--wrapper">
-        <div className="audio__controls">
-            <button className="audio__controls--btn">
-                <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                <path fill="none" stroke="#000" strokeWidth="2" d="M3.11111111,7.55555556 C4.66955145,4.26701301 8.0700311,2 12,2 C17.5228475,2 22,6.4771525 22,12 C22,17.5228475 17.5228475,22 12,22 L12,22 C6.4771525,22 2,17.5228475 2,12 M2,4 L2,8 L6,8 M9,16 L9,9 L7,9.53333333 M17,12 C17,10 15.9999999,8.5 14.5,8.5 C13.0000001,8.5 12,10 12,12 C12,14 13,15.5000001 14.5,15.5 C16,15.4999999 17,14 17,12 Z M14.5,8.5 C16.9253741,8.5 17,11 17,12 C17,13 17,15.5 14.5,15.5 C12,15.5 12,13 12,12 C12,11 12.059,8.5 14.5,8.5 Z"></path>
-                </svg>
-                </button>
-                <button className="audio__controls--btn audio__controls--btn-play">
-                    <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" className="audio__controls--play-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M96 448l320-192L96 64v384z"></path>
+          <SideBarFontChange />
+          <Search />
+          <div className="summary">
+            <div className="audio__book--summary" style={{ fontSize: "16px" }}>
+              <div className="audio__book--summary-title">
+                <b>{book.title}</b>
+              </div>
+              <div className="audio__book--summary-text">{book.summary}</div>
+            </div>
+            <div className="audio__wrapper">
+              <audio
+                ref={audioRef}
+                src={book.audioLink}
+                controls
+                style={{ display: "none" }}
+                onTimeUpdate={handleTimeUpdate}
+                onLoadedMetadata={handleLoadedMetadata}
+              />
+              <div className="audio__track--wrapper">
+                <figure className="audio__track--image-mask">
+                  <figure
+                    className="book__image--wrapper"
+                    style={{ height: "48px", width: "48px", minWidth: "48px" }}
+                  >
+                    <img
+                      className="book__image"
+                      src="https://firebasestorage.googleapis.com/v0/b/summaristt.appspot.com/o/books%2Fimages%2Fhow-to-win-friends-and-influence-people.png?alt=media&amp;token=099193aa-4d85-4e22-8eb7-55f12a235fe2"
+                      alt="book"
+                      style={{ display: "block" }}
+                    ></img>
+                  </figure>
+                </figure>
+                <div className="audio__track--details-wrapper">
+                  <div className="audio__track--title">{book.title}</div>
+                  <div className="audio__track--author">{book.author}</div>
+                </div>
+              </div>
+              <div className="audio__controls--wrapper">
+                <div className="audio__controls">
+                  <button className="audio__controls--btn">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      strokeWidth="0"
+                      viewBox="0 0 24 24"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill="none"
+                        stroke="#000"
+                        strokeWidth="2"
+                        d="M3.11111111,7.55555556 C4.66955145,4.26701301 8.0700311,2 12,2 C17.5228475,2 22,6.4771525 22,12 C22,17.5228475 17.5228475,22 12,22 L12,22 C6.4771525,22 2,17.5228475 2,12 M2,4 L2,8 L6,8 M9,16 L9,9 L7,9.53333333 M17,12 C17,10 15.9999999,8.5 14.5,8.5 C13.0000001,8.5 12,10 12,12 C12,14 13,15.5000001 14.5,15.5 C16,15.4999999 17,14 17,12 Z M14.5,8.5 C16.9253741,8.5 17,11 17,12 C17,13 17,15.5 14.5,15.5 C12,15.5 12,13 12,12 C12,11 12.059,8.5 14.5,8.5 Z"
+                      ></path>
                     </svg>
-                    </button>
-                    <button className="audio__controls--btn">
-                        <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                        <path fill="none" stroke="#000" strokeWidth="2" d="M20.8888889,7.55555556 C19.3304485,4.26701301 15.9299689,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 L12,22 C17.5228475,22 22,17.5228475 22,12 M22,4 L22,8 L18,8 M9,16 L9,9 L7,9.53333333 M17,12 C17,10 15.9999999,8.5 14.5,8.5 C13.0000001,8.5 12,10 12,12 C12,14 13,15.5000001 14.5,15.5 C16,15.4999999 17,14 17,12 Z M14.5,8.5 C16.9253741,8.5 17,11 17,12 C17,13 17,15.5 14.5,15.5 C12,15.5 12,13 12,12 C12,11 12.059,8.5 14.5,8.5 Z"></path>
-                        </svg>
-                        </button>
-                        </div>
-                        </div>
-                        <div className="audio__progress--wrapper">
-                            <div className="audio__time">NULL</div>
-                            <input type="range" className="audio__progress--bar" value="0" max="204.048" className="background: linear-gradient(to right, rgb(43, 217, 124) 0.490081%, rgb(109, 120, 125) 0.490081%); --range-progress: 0.4900807653101231%;"></input>
-                            <div className="audio__time">NULL</div>
-                            </div>
-                            </div>
-                            </div>
-                            </div>
-                            </div>
-        </>
-    )
-}
+                  </button>
+                  <button
+                    className="audio__controls--btn audio__controls--btn-play"
+                    onClick={() => {
+                      if (isPlaying) {
+                        setIsPlaying(false);
+                        audioRef.current.pause();
+                      } else {
+                        setIsPlaying(true);
+                        audioRef.current.play();
+                      }
+                    }}
+                  >
+                    {isPlaying ? (
+                      <svg
+                        stroke="currentColor"
+                        fill="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 512 512"
+                        className="audio__controls--pause-icon"
+                        height="1em"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M160 64h56v384h-56zM296 64h56v384h-56z"></path>
+                      </svg>
+                    ) : (
+                      <svg
+                        stroke="currentColor"
+                        fill="currentColor"
+                        strokeWidth="0"
+                        viewBox="0 0 512 512"
+                        className="audio__controls--play-icon"
+                        height="1em"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M96 448l320-192L96 64v384z"></path>
+                      </svg>
+                    )}
+                  </button>
+                  <button className="audio__controls--btn">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      strokeWidth="0"
+                      viewBox="0 0 24 24"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill="none"
+                        stroke="#000"
+                        strokeWidth="2"
+                        d="M20.8888889,7.55555556 C19.3304485,4.26701301 15.9299689,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 L12,22 C17.5228475,22 22,17.5228475 22,12 M22,4 L22,8 L18,8 M9,16 L9,9 L7,9.53333333 M17,12 C17,10 15.9999999,8.5 14.5,8.5 C13.0000001,8.5 12,10 12,12 C12,14 13,15.5000001 14.5,15.5 C16,15.4999999 17,14 17,12 Z M14.5,8.5 C16.9253741,8.5 17,11 17,12 C17,13 17,15.5 14.5,15.5 C12,15.5 12,13 12,12 C12,11 12.059,8.5 14.5,8.5 Z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <AudioPlayer
+                currentTime={currentTime}
+                audioRef={audioRef}
+                setCurrentTime={setCurrentTime}
+                duration={duration}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
 
 export default ReadButtonSummary;
 
 //In the example, the read and listen button return the same page
 //So this page will be used for both buttons
-
- 
