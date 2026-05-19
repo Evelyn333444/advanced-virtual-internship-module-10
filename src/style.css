@@ -2202,10 +2202,6 @@ h2 {
     width: 100%;
 }
 
-[type=button], [type=reset], [type=submit], button {
-    -webkit-appearance: button;
-}
-
 /* Book page */
 
 .inner__wrapper {
