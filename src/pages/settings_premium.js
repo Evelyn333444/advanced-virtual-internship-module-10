@@ -18,8 +18,7 @@ const Settings_Premium = () => {
         </div>
         <div className="setting__content">
         <div className="settings__sub--title">Email</div>
-        <div className="settings__text">brackesb12@gmail.com</div>
-        //FIX THE EMAIL - ITS NOT HARDCODED TO MINE
+        <div className="settings__text">{user.email}</div>
         </div>
         </div>
         </div>

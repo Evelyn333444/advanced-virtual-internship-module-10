@@ -1,7 +1,11 @@
 import SideBarFontChange from '../components/sideBarFontChange'
 import Search from '../components/search'
+import { useParams } from 'react-router-dom';
 
 const ReadButtonSummary = () => {
+const { id } = useParams();
+
+    const [book, setBook] = useState(null);
     return (
         <>
         <div id="__next">

@@ -1538,6 +1538,20 @@ audio {
 
 /*Subscription payment page*/
 
+.__PrivateStripeElement {
+  margin: "-4px 0px";
+  padding: "0px" !important;
+  border-width: "medium" !important;
+  border-style: "none" !important;
+  border-color: "currentcolor" !important;
+  border-image: "initial" !important;
+  display: "block" !important;
+  background: "transparent" !important;
+  position: "relative" !important;
+  opacity: "1" !important;
+  transition: "height 0.35s" !important;
+}
+
 .SubmitButton-IconContainer {
     height: 100%;
     left: 0;
