@@ -926,6 +926,47 @@ search, .search__input--wrapper {
     color: #03314b;
 }
 
+/* SideBar (both) */
+
+.sidebar__font--size-icon-medium {
+    width: 24px;
+    height: 24px;
+}
+
+.sidebar__font--size-icon-small {
+    width: 20px;
+    height: 20px;
+}
+
+.sidebar__font--size-icon-large {
+    width: 28px;
+    height: 28px;
+}
+
+.sidebar__font--size-icon-xlarge {
+    width: 32px;
+    height: 32px;
+}
+
+.sidebar__font--size-icon--active {
+    border-bottom: 3px solid #2bd97c;
+}
+
+.sidebar__font--size-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+}
+
+.sidebar__font--size-wrapper {
+    display: flex;
+    margin-left: 24px;
+    gap: 8px;
+}
+
 .sidebar__toggle--btn {
     display: none;
     align-items: center;
