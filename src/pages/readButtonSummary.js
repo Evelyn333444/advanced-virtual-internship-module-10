@@ -4,7 +4,9 @@ import { useParams } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 
 const ReadButtonSummary = () => {
-const { id } = useParams();
+    const { id } = useParams();
+     const [book, setBook] = useState(null);
+     const [loading, setLoading] = useState(true);
 
 useEffect(() => {
     async function fetchBook() {
@@ -21,8 +23,6 @@ useEffect(() => {
     fetchBook();
   }, [id]);
 
-
-    const [book, setBook] = useState(null);
     if (!book) {
   return <div>Loading...</div>;
 }
