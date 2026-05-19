@@ -7,15 +7,15 @@ const ReadButtonSummary = () => {
         <div id="__next">
         <div className="wrapper">
         <div className="summary">
-            <div className="audio__book--summary" style="font-size: 16px;">
+            <div className="audio__book--summary" style={{fontSize: "16px"}}>
                 <div className="audio__book--summary-title">
                     <b>{book.title}</b>
                     </div>
                     <div className="audio__book--summary-text">{book.summary}</div>
                     </div>
                     <div className="audio__wrapper">
- <audio src="https://firebasestorage.googleapis.com/v0/b/summaristt.appspot.com/o/books%2Faudios%2Fhow-to-win-friends-and-influence-people.mp3?alt=media&amp;token=60872755-13fc-43f4-8b75-bae3fcd73991"></audio><div className="audio__track--wrapper"><figure className="audio__track--image-mask"><figure className="book__image--wrapper" style="height: 48px; width: 48px; min-width: 48px;">
- <img className="book__image" src="https://firebasestorage.googleapis.com/v0/b/summaristt.appspot.com/o/books%2Fimages%2Fhow-to-win-friends-and-influence-people.png?alt=media&amp;token=099193aa-4d85-4e22-8eb7-55f12a235fe2" alt="book" style="display: block;"></img></figure>
+ <audio src="https://firebasestorage.googleapis.com/v0/b/summaristt.appspot.com/o/books%2Faudios%2Fhow-to-win-friends-and-influence-people.mp3?alt=media&amp;token=60872755-13fc-43f4-8b75-bae3fcd73991"></audio><div className="audio__track--wrapper"><figure className="audio__track--image-mask"><figure className="book__image--wrapper" style={{height: "48px", width: "48px", minWidth: "48px"}}>
+ <img className="book__image" src="https://firebasestorage.googleapis.com/v0/b/summaristt.appspot.com/o/books%2Fimages%2Fhow-to-win-friends-and-influence-people.png?alt=media&amp;token=099193aa-4d85-4e22-8eb7-55f12a235fe2" alt="book" style={{display: "block"}}></img></figure>
  </figure>
  <div className="audio__track--details-wrapper">
     <div className="audio__track--title">{book.title}</div>
@@ -55,3 +55,8 @@ const ReadButtonSummary = () => {
 }
 
 export default ReadButtonSummary;
+
+//In the example, the read and listen button return the same page
+//So this page will be used for both buttons
+
+ 
