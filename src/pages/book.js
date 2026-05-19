@@ -83,6 +83,7 @@ const Book = () => {
         </div>
         </div>
         <div className="inner-book__read--btn-wrapper">
+          <Link to={`/summary/${book.id}`}>
         <button className="inner-book__read--btn">
         <div className="inner-book__read--icon">
         <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
@@ -91,6 +92,8 @@ const Book = () => {
         </div>
         <div className="inner-book__read--text">Read</div>
         </button>
+        </Link>
+        <Link to={`/summary/${book.id}`}>
         <button className="inner-book__read--btn">
         <div className="inner-book__read--icon">
         <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
@@ -99,6 +102,7 @@ const Book = () => {
         </div>
         <div className="inner-book__read--text">Listen</div>
         </button>
+        </Link>
         </div>
         <div className="inner-book__bookmark">
         <div className="inner-book__bookmark--icon">

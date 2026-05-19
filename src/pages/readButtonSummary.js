@@ -1,12 +1,31 @@
 import SideBarFontChange from '../components/sideBarFontChange'
 import Search from '../components/search'
 import { useParams } from 'react-router-dom';
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
 
 const ReadButtonSummary = () => {
 const { id } = useParams();
 
+useEffect(() => {
+    async function fetchBook() {
+      const response = await fetch(
+        `https://us-central1-summaristt.cloudfunctions.net/getBook?id=${id}`
+      );
+
+      const data = await response.json();
+
+      setBook(data);
+      setLoading(false);
+    }
+
+    fetchBook();
+  }, [id]);
+
+
     const [book, setBook] = useState(null);
+    if (!book) {
+  return <div>Loading...</div>;
+}
     return (
         <>
         <div id="__next">

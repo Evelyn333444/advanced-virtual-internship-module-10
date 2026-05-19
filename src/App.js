@@ -11,6 +11,7 @@ import Loginhandler from './components/LoginHandler'
 import SignUpHandler from './components/signUpHandler'
 import Sidebar from './components/sideBar'
 import Book from './pages/book';
+import ReadButtonSummary from './pages/readButtonSummary';
 
 
 const App = () => {
@@ -40,6 +41,7 @@ const App = () => {
             <Route path="/choose-plan" element={<UpgradeToPremium />} />
             <Route path="/foryou" element={<ForYou user={user} handleLogout={handleLogout} />} />
             <Route path="/book/:id" element={<Book />} />
+            <Route path="/summary/:id" element={<ReadButtonSummary />} />
 
 
           </>
