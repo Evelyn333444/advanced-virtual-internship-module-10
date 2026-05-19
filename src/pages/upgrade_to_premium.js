@@ -64,7 +64,9 @@ const UpgradeToPremium = () => {
     <div className="plan__card--content">
         <div className="plan__card--title">Premium Plus Yearly</div>
     <div className="plan__card--price">$99.99/year</div>
-    <div className="plan__card--text">7-day free trial included</div>
+    <div>
+        className="plan__card--text"7-day free trial included
+        </div>
     </div>
     </div>
     <div className="plan__card ">
