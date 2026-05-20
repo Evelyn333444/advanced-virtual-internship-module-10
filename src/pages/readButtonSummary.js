@@ -22,6 +22,14 @@ const ReadButtonSummary = () => {
     setDuration(audioRef.current.duration);
   }
 
+  const [fontSize, setFontSize] = useState(16);
+
+// pass it down
+<SideBarFontChange handleLogout={() => {}} fontSize={fontSize} setFontSize={setFontSize} />
+
+// apply it here
+<div className="audio__book--summary" style={{ fontSize: `${fontSize}px` }}></div>
+
   useEffect(() => {
     async function fetchBook() {
       const response = await fetch(
@@ -68,12 +76,12 @@ const ReadButtonSummary = () => {
                     className="book__image--wrapper"
                     style={{ height: "48px", width: "48px", minWidth: "48px" }}
                   >
-                    <img
-                      className="book__image"
-                      src="https://firebasestorage.googleapis.com/v0/b/summaristt.appspot.com/o/books%2Fimages%2Fhow-to-win-friends-and-influence-people.png?alt=media&amp;token=099193aa-4d85-4e22-8eb7-55f12a235fe2"
-                      alt="book"
-                      style={{ display: "block" }}
-                    ></img>
+                   <img
+                    className="book__image"
+                    src={book.imageLink}
+                    alt={book.title}
+                    style={{ display: "block" }}
+                    />
                   </figure>
                 </figure>
                 <div className="audio__track--details-wrapper">
