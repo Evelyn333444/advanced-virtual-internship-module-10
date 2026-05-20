@@ -8,7 +8,7 @@ const Settings_Premium = () => {
     <div id="__next">
     <div className="wrapper"></div>
     <div className="container">
-        <Search />
+        <Search onSearch={setSearchTerm} />
         <Sidebar />
         <div className="row">
         <div className="section__title page__title">Settings</div>

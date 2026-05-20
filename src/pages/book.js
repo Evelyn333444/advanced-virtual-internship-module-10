@@ -36,7 +36,7 @@ const Book = () => {
         <>
         <div id="__next">
         <div className="wrapper">
-        <Search />
+        <Search onSearch={setSearchTerm} />
         <div className="row">
         <audio controls src={book.audioLink}></audio>
         <div className="container">

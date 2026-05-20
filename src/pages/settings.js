@@ -38,7 +38,7 @@ const getUserEmailFromAPI = async () => {
         <>
             <div id="__next">
                 <div className="wrapper">
-                    <Search />
+                    <Search onSearch={setSearchTerm} />
                     <SideBar handleLogout={handleLogout} />
                     <div className="row">
                         <div className="container">
