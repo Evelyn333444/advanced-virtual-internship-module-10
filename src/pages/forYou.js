@@ -34,6 +34,8 @@ const [suggested, setSuggested] = useState([]);
 const [bookMap, setBookMap] = useState([]);
     const [loading, setLoading] = useState(true);
 
+    const [searchTerm, setSearchTerm] = useState("");
+
 useEffect(() => {
         const fetchBooks = async () => {
             // Simulating a fetch call
