@@ -46,9 +46,9 @@ const ReadButtonSummary = () => {
     <>
       <div id="__next">
         <div className="wrapper">
-          <SideBarFontChange />
+          <SideBarFontChange  fontSize={fontSize} setFontSize={setFontSize}/>
           <Search />
-          <div className="summary">
+          <div className="summary" style={{fontSize: `${fontSize}px`}}>
             <div className="audio__book--summary" style={{ fontSize: `${fontSize}px` }}>
               <div className="audio__book--summary-title">
                  <b>{book.title}</b>
