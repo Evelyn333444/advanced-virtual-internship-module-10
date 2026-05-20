@@ -64,21 +64,6 @@ button:disabled {
   width: 100%;
 }
 
-.sidebar {
-    background-color: #f7faf9;
-    width: 200px;
-    min-width: 200px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    z-index: 1000;
-    transition: all .3s;
-     min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
 .btn {
   background-color: #2bd97c;
   color: #032b41;
@@ -931,8 +916,31 @@ search, .search__input--wrapper {
 
 /* SideBar (both) */
 
+.sidebar {
+    background-color: #f7faf9;
+    width: 200px;
+    min-width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1000;
+    transition: all .3s;
+     min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
 .sidebar__bottom {
   margin-top: auto;
+  margin-bottom: 70px;
 }
 
 .sidebar__font--size-icon-medium {
