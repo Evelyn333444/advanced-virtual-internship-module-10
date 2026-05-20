@@ -74,6 +74,9 @@ button:disabled {
     height: 100vh;
     z-index: 1000;
     transition: all .3s;
+     min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .btn {
@@ -927,6 +930,10 @@ search, .search__input--wrapper {
 }
 
 /* SideBar (both) */
+
+.sidebar__bottom {
+  margin-top: auto;
+}
 
 .sidebar__font--size-icon-medium {
     width: 24px;
