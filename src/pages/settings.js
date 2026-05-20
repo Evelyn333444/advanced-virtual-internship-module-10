@@ -12,6 +12,8 @@ const Settings = ({ handleLogout }) => {
         role: ""
     });
 
+    const [searchTerm, setSearchTerm] = useState("");
+
     useEffect(() => {
         // Simulate fetching the user's email from an API or context
     const fetchUserEmail = async () => {

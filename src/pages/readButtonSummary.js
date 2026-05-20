@@ -13,6 +13,7 @@ const ReadButtonSummary = () => {
 
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
+  const [searchTerm, setSearchTerm] = useState("");
 
   function handleTimeUpdate() {
     setCurrentTime(audioRef.current.currentTime);

@@ -11,6 +11,7 @@ const Book = () => {
 
     const [book, setBook] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState("");
 
 
     useEffect(() => {

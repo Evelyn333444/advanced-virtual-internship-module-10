@@ -36,6 +36,10 @@ const [bookMap, setBookMap] = useState([]);
 
     const [searchTerm, setSearchTerm] = useState("");
 
+    const filteredRecommended = recommended.filter((book) =>
+  book.title.toLowerCase().includes(searchTerm.toLowerCase())
+);
+
 useEffect(() => {
         const fetchBooks = async () => {
             // Simulating a fetch call
@@ -58,7 +62,7 @@ useEffect (() => {
   return (
     <div id="__next">
       <div className="wrapper">
-        <Search onSearch={(term) => console.log(term)} />
+        <Search onSearch={setSearchTerm} />
         <SideBar handleLogout={handleLogout} />
         <div className="row">
           <div className="container">
@@ -96,14 +100,14 @@ useEffect (() => {
             <div className="for-you__title">Recommended For You</div>
             <div className="for-you__sub--title">We think you’ll like these</div>
             <div className="for-you__recommended--books">
-            <BookMap bookMap={recommended} loading={loading} />
-            <BookMap bookMap={recommended} loading={loading} />
-            <BookMap bookMap={recommended} loading={loading} />
-            <BookMap bookMap={recommended} loading={loading} />
-            <BookMap bookMap={recommended} loading={loading} />
-            <BookMap bookMap={recommended} loading={loading} />
-            <BookMap bookMap={recommended} loading={loading} />
-            <BookMap bookMap={recommended} loading={loading} />
+            Map bookMap={recommended} loading={loading} 
+            <BookMap bookMap={filteredRecommended} loading={loading} />
+            <BookMap bookMap={filteredRecommended} loading={loading} />
+            <BookMap bookMap={filteredRecommended} loading={loading} />
+            <BookMap bookMap={filteredRecommended} loading={loading} />
+            <BookMap bookMap={filteredRecommended} loading={loading} />
+            <BookMap bookMap={filteredRecommended} loading={loading} />
+            <BookMap bookMap={filteredRecommended} loading={loading} />
             </div>
             </div>
             <div>
