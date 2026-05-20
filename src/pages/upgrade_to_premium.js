@@ -10,6 +10,7 @@ import UpgradeSwitch from '../components/upgradeSwitch';
 const UpgradeToPremium = () => {
          const [showUpgrade, setUpgrade] = useState(false);
          const [openIndex, setOpenIndex] = useState(0);
+         const [selectedPlan, setSelectedPlan] = useState("yearly");
 
          const toggleAccordion = (i) => {
              setOpenIndex((prev) => (prev === i ? null : i));
@@ -57,19 +58,29 @@ const UpgradeToPremium = () => {
     </div>
     <div className="section__title">Choose the plan that fits you</div>
     <div className="plan__cards--wrapper">
-    <div className="plan__card plan__card--active">
+    <div
+        className={`plan__card ${
+        selectedPlan === "yearly" ? "plan__card--active" : ""
+         }`}
+  onClick={() => setSelectedPlan("yearly")}
+>
     <div className="plan__card--circle">
         <div className="plan__card--dot"></div>
     </div>
     <div className="plan__card--content">
         <div className="plan__card--title">Premium Plus Yearly</div>
     <div className="plan__card--price">$99.99/year</div>
-    <div>
-        className="plan__card--text"7-day free trial included
-        </div>
+    <div className="plan__card--text">
+        7-day free trial included
     </div>
     </div>
-    <div className="plan__card ">
+    </div>
+    <div
+  className={`plan__card ${
+    selectedPlan === "monthly" ? "plan__card--active" : ""
+  }`}
+  onClick={() => setSelectedPlan("monthly")}
+>
     <div className="plan__card--circle"></div>
     <div className="plan__card--content">
     <div className="plan__card--title">Premium Monthly</div>
