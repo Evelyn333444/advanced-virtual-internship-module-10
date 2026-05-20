@@ -74,8 +74,8 @@ function TextResizer() {
 </div>
 </div>
 <div className="sidebar__bottom">
-    <div class="sidebar__link--wrapper sidebar__font--size-wrapper">
-    <div class="sidebar__link--text sidebar__font--size-icon sidebar__font--size-icon--active">
+    <div className="sidebar__link--wrapper sidebar__font--size-wrapper">
+    <div className="sidebar__link--text sidebar__font--size-icon sidebar__font--size-icon--active">
         <button onClick={() => setFontSize(12)}>Small</button>
         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="sidebar__font--size-icon-small" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
         <g>
@@ -84,24 +84,24 @@ function TextResizer() {
             </g>
             </svg>
             </div>
-            <div class="sidebar__link--text sidebar__font--size-icon">
-                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="sidebar__font--size-icon-medium" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g>
+            <div className="sidebar__link--text sidebar__font--size-icon">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" className="sidebar__font--size-icon-medium" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g>
                     <button onClick={() => setFontSize(13.5)}>Medium</button>
                     <path fill="none" d="M0 0h24v24H0z"></path>
                     <path d="M11.246 15H4.754l-2 5H.6L7 4h2l6.4 16h-2.154l-2-5zm-.8-2L8 6.885 5.554 13h4.892zM21 12.535V12h2v8h-2v-.535a4 4 0 1 1 0-6.93zM19 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
                     </g>
                     </svg>
                     </div>
-                    <div class="sidebar__link--text sidebar__font--size-icon">
-                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="sidebar__font--size-icon-large" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g>
+                    <div className="sidebar__link--text sidebar__font--size-icon">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" className="sidebar__font--size-icon-large" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g>
                             <button onClick={() => setFontSize(16.5)}>Large</button>
                             <path fill="none" d="M0 0h24v24H0z"></path>
                             <path d="M11.246 15H4.754l-2 5H.6L7 4h2l6.4 16h-2.154l-2-5zm-.8-2L8 6.885 5.554 13h4.892zM21 12.535V12h2v8h-2v-.535a4 4 0 1 1 0-6.93zM19 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
                             </g>
                             </svg>
                             </div>
-                            <div class="sidebar__link--text sidebar__font--size-icon">
-                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="sidebar__font--size-icon-xlarge" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g>
+                            <div className="sidebar__link--text sidebar__font--size-icon">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" className="sidebar__font--size-icon-xlarge" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g>
                                     <button onClick={() => setFontSize(19.5)}>Extra Large</button>
                                     <path fill="none" d="M0 0h24v24H0z"></path>
                                     <path d="M11.246 15H4.754l-2 5H.6L7 4h2l6.4 16h-2.154l-2-5zm-.8-2L8 6.885 5.554 13h4.892zM21 12.535V12h2v8h-2v-.535a4 4 0 1 1 0-6.93zM19 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
