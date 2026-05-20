@@ -53,11 +53,10 @@ useEffect (() => {
   fetchData2().then(data => setRecommended(data));
 }, [])
 
-
   return (
     <div id="__next">
       <div className="wrapper">
-        <Search />
+        <Search onSearch={(term) => console.log(term)} />
         <SideBar handleLogout={handleLogout} />
         <div className="row">
           <div className="container">
