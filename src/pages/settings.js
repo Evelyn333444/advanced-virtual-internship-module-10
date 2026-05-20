@@ -14,14 +14,14 @@ const Settings = ({ handleLogout }) => {
 
     useEffect(() => {
         // Simulate fetching the user's email from an API or context
-        const fetchUserEmail = async () => {
-            // Replace this with your actual data fetching logic
-            const email = await getUserEmailFromAPI(); // Hypothetical function
-            setUserEmail(email);
-        };
+    const fetchUserEmail = async () => {
+        // Replace this with your actual data fetching logic
+        const email = await getUserEmailFromAPI();
+        setUser(prev => ({ ...prev, email: email }));
+    };
+    fetchUserEmail();
+}, []); // Empty array means this runs once when the component mounts
 
-        fetchUserEmail();
-    }, []); // Empty array means this runs once when the component mounts
 
     // Hypothetical function to simulate fetching email
 const getUserEmailFromAPI = async () => {
@@ -50,7 +50,7 @@ const getUserEmailFromAPI = async () => {
                             </div>
                             <div className="setting__content">
                                 <div className="settings__sub--title">Email</div>
-                                <div className="settings__text"><p>{Email}</p></div>
+                                <div className="settings__text"><p>{user.email}</p></div>
                             </div>
                             <div className="setting__content">
                                 <button className="btn" onClick={handleLogout}>Logout</button>
