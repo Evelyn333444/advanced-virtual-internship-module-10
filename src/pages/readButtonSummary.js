@@ -24,12 +24,6 @@ const ReadButtonSummary = () => {
 
   const [fontSize, setFontSize] = useState(16);
 
-// pass it down
-<SideBarFontChange handleLogout={() => {}} fontSize={fontSize} setFontSize={setFontSize} />
-
-// apply it here
-<div className="audio__book--summary" style={{ fontSize: `${fontSize}px` }}></div>
-
   useEffect(() => {
     async function fetchBook() {
       const response = await fetch(
@@ -55,12 +49,12 @@ const ReadButtonSummary = () => {
           <SideBarFontChange />
           <Search />
           <div className="summary">
-            <div className="audio__book--summary" style={{ fontSize: "16px" }}>
+            <div className="audio__book--summary" style={{ fontSize: `${fontSize}px` }}>
               <div className="audio__book--summary-title">
-                <b>{book.title}</b>
+                 <b>{book.title}</b>
+                </div>
+                <div className="audio__book--summary-text">{book.summary}</div>
               </div>
-              <div className="audio__book--summary-text">{book.summary}</div>
-            </div>
             <div className="audio__wrapper">
               <audio
                 ref={audioRef}

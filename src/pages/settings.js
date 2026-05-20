@@ -50,7 +50,7 @@ const getUserEmailFromAPI = async () => {
                             </div>
                             <div className="setting__content">
                                 <div className="settings__sub--title">Email</div>
-                                <div className="settings__text"><p>{userEmail}</p></div>
+                                <div className="settings__text"><p>{Email}</p></div>
                             </div>
                             <div className="setting__content">
                                 <button className="btn" onClick={handleLogout}>Logout</button>
