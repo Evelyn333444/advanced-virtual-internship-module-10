@@ -100,13 +100,6 @@ useEffect (() => {
             <div className="for-you__title">Recommended For You</div>
             <div className="for-you__sub--title">We think you’ll like these</div>
             <div className="for-you__recommended--books">
-            Map bookMap={recommended} loading={loading} 
-            <BookMap bookMap={filteredRecommended} loading={loading} />
-            <BookMap bookMap={filteredRecommended} loading={loading} />
-            <BookMap bookMap={filteredRecommended} loading={loading} />
-            <BookMap bookMap={filteredRecommended} loading={loading} />
-            <BookMap bookMap={filteredRecommended} loading={loading} />
-            <BookMap bookMap={filteredRecommended} loading={loading} />
             <BookMap bookMap={filteredRecommended} loading={loading} />
             </div>
             </div>
