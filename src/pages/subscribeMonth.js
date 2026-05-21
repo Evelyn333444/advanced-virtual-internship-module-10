@@ -1,9 +1,9 @@
 import CountriesSubscription from "../components/countriesSubscription";
 import StatesSubscription from "../components/statesSubscription";
 import FooterSubscription from "../components/footerSubscription";
-<input type="checkbox" onChange={() => {}} />
 
 const SubscribeMonth = () => {
+    <input type="checkbox" onChange={() => {}} />
     return (
         <>
         <div className="App">
@@ -52,7 +52,7 @@ const SubscribeMonth = () => {
         </div>
         <div className="flex-item width-fixed">
         <span className="ProductSummaryTotalAmount-billingInterval Text Text-color--gray500 Text-fontSize--14">
-        <div>per <br className="BillingIntervalBreak">month</br></div>
+        <div>per <br className="BillingIntervalBreak" />month</div>
         </span>
         </div>
         </div>
