@@ -6,6 +6,9 @@ import UpgradeCancel from '../components/upgradeCancel';
 import UpgradeIncluded from '../components/upgradeIncluded';
 import UpgradeSevenDay from '../components/upgradeSevenDay';
 import UpgradeSwitch from '../components/upgradeSwitch';
+import SubscribeMonth from '../pages/subscribeMonth';
+import SubscribeYear from '../pages/subscribeYear';
+import { useNavigate } from "react-router-dom";
 
 const UpgradeToPremium = () => {
          const [showUpgrade, setUpgrade] = useState(false);
@@ -15,6 +18,14 @@ const UpgradeToPremium = () => {
          const toggleAccordion = (i) => {
              setOpenIndex((prev) => (prev === i ? null : i));
          };
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    // Navigate to the desired route
+    navigate('../pages/subscribeMonth');
+  }
+  
   return (
     <>
     <div id="__next">
@@ -91,7 +102,9 @@ const UpgradeToPremium = () => {
     </div>
     <div className="plan__card--cta">
     <span className="btn--wrapper">
-    <button className="btn" style={{width: "300px"}}>
+    <button className="btn" style={{width: "300px"}} 
+    onClick={handleClick}>
+        Go to SubscribeMonth
     <span>Start your free 7-day trial</span>
     </button>
     </span>
