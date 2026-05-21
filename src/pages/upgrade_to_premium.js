@@ -6,8 +6,6 @@ import UpgradeCancel from '../components/upgradeCancel';
 import UpgradeIncluded from '../components/upgradeIncluded';
 import UpgradeSevenDay from '../components/upgradeSevenDay';
 import UpgradeSwitch from '../components/upgradeSwitch';
-import SubscribeMonth from '../pages/subscribeMonth';
-import SubscribeYear from '../pages/subscribeYear';
 import { useNavigate } from "react-router-dom";
 
 const UpgradeToPremium = () => {
@@ -22,9 +20,8 @@ const UpgradeToPremium = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    // Navigate to the desired route
-    navigate('../pages/subscribeMonth');
-  }
+    navigate(selectedPlan === "yearly" ? "/subscribe-year" : "/subscribe-month");
+  };
   
   return (
     <>
@@ -70,10 +67,12 @@ const UpgradeToPremium = () => {
     <div className="section__title">Choose the plan that fits you</div>
     <div className="plan__cards--wrapper">
     <div
+    
         className={`plan__card ${
         selectedPlan === "yearly" ? "plan__card--active" : ""
          }`}
   onClick={() => setSelectedPlan("yearly")}
+  
 >
     <div className="plan__card--circle">
         <div className="plan__card--dot"></div>
@@ -102,10 +101,8 @@ const UpgradeToPremium = () => {
     </div>
     <div className="plan__card--cta">
     <span className="btn--wrapper">
-    <button className="btn" style={{width: "300px"}} 
-    onClick={handleClick}>
-        Go to SubscribeMonth
-    <span>Start your free 7-day trial</span>
+    <button className="btn" style={{ width: "300px" }} onClick={handleClick}>
+      Start your free 7-day trial
     </button>
     </span>
     <div className="plan__disclaimer">Cancel your trial at any time before it ends, and you won’t be charged.</div>
