@@ -1,9 +1,9 @@
 import CountriesSubscription from "../components/countriesSubscription";
 import StatesSubscription from "../components/statesSubscription";
 import FooterSubscription from "../components/footerSubscription";
-<input type="checkbox" onChange={() => {}} />
 
 const SubscribeYear = () => {
+    <input type="checkbox" onChange={() => {}} />
     return (
         <>
         <div className="App">
