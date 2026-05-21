@@ -7,13 +7,13 @@ const SubscribeYear = () => {
     return (
         <>
         <div className="App">
-        <header className="App-header wEAIlV87__Header" style="background-color: rgb(255, 255, 255);">
+        <header className="App-header wEAIlV87__Header" style={{backgroundColor: "rgb(255, 255, 255)"}}>
         <div className="aYuOZURb__Header-content flex-container align-items-stretch">
         <div className="flex-item width-auto flex-container align-items-center width-auto">
         <a className="Link NTVCZeIn__BusinessLink alXgr_l1__BusinessLink--withArrow i7-BfIyQ__BusinessLink--withBusinessNameLabel Link--primary" href="https://summarist.vercel.app/for-you" aria-label="Back to Summarist" title="Summarist" target="_self" data-testid="business-link">
-        <div style="position: relative;">
+        <div style={{position: "relative"}}>
         <div className="flex-container align-items-center">
-        <div className="l-dw6QUX__BusinessLink-backArrowContainer" style="opacity: 1; transform: none;">
+        <div className="l-dw6QUX__BusinessLink-backArrowContainer" style={{opacity: "1", transform: "none"}}>
         <svg className="InlineSVG Icon _7GXAXK4O__BusinessLink-backArrow mr2 Icon--sm" focusable="false" width="12" height="12" viewBox="0 0 16 16">
         <path d="M3.417 7H15a1 1 0 0 1 0 2H3.417l4.591 4.591a1 1 0 0 1-1.415 1.416l-6.3-6.3a1 1 0 0 1 0-1.414l6.3-6.3A1 1 0 0 1 8.008 2.41z" fillRule="evenodd"></path>
         </svg>
@@ -35,14 +35,14 @@ const SubscribeYear = () => {
         </div>
         </div>
         </header>
-        <div aria-hidden="true" style="position: absolute; top: 0px; width: 0px; height: 0px; opacity: 0;"></div>
-        <div className="App-Overview" style="background-color: rgb(255, 255, 255);">
+        <div aria-hidden="true" style={{position: "absolute", top: "0px", width: "0px", height: "0px", opacity: "0"}}></div>
+        <div className="App-Overview" style={{backgroundColor: "rgb(255, 255, 255)"}}>
         <div className="OrderSummaryColumn" data-testid="order-summary-column">
         <div data-testid="product-summary" className="ProductSummary no-image is-recurring is-singleLargeImageLayout">
         <div className="ProductSummary-info">
         <h2 className="ProductSummary-name Text Text-color--gray500 Text-fontSize--16 Text-fontWeight--500" data-testid="product-summary-name">Subscribe to Summarist Premium Plus</h2>
         <div className="ProductSummary-amountsContainer false">
-        <div className="ProductSummary-totalsRead" style="opacity: 1;">
+        <div className="ProductSummary-totalsRead" style={{opacity: "1"}}>
         <div className="ProductSummary-totalAmountContainer">
         <div className="">
         <span className="ProductSummary-totalAmount Text Text-color--default Text-fontWeight--600 Text--tabularNumbers" id="ProductSummary-totalAmount" data-testid="product-summary-total-amount">
@@ -75,16 +75,16 @@ const SubscribeYear = () => {
         </div>
         <div className="App-Payment">
         <main className="CheckoutPaymentForm">
-        <div style="height: 0px;">
+        <div style={{height: "0px"}}>
             <div>
         <div className="PaymentRequestOrHeader">
-        <div className="ButtonAndDividerContainer" style="overflow: hidden; opacity: 0; height: 0px;">
+        <div className="ButtonAndDividerContainer" style={{overflow: "hidden", opacity: "0", height: "0px"}}>
         <div className="ButtonContainer">
         <div className="ButtonWrapper">
         <div className="ButtonWrapper">
         <div className="ElementsExpressCheckoutElement StripeElement" data-testid="express-checkout-element">
-        <div className="__PrivateStripeElement" style="margin: -4px 0px !important; padding: 0px !important; border-width: medium !important; border-style: none !important; border-color: currentcolor !important; border-image: initial !important; display: block !important; background: transparent !important; position: relative !important; opacity: 1 !important; transition: height 0.35s !important;">
-        <iframe name="__privateStripeFrame8934" frameborder="0" allowtransparency="true" scrolling="no" role="presentation" allow="payment *" src="https://js.stripe.com/v3/elements-inner-express-checkout-6d85533135dcacc555cf5a5ce09f6309.html#__shared_params__[version]=v3&amp;__shared_params__[light_experiment_assignments]=%7B%22token%22%3A%22a0b75ea9-ca3a-412d-82a9-4e8713be5903%22%2C%22assignments%22%3A%7B%22habanero_aa_v1%22%3A%22treatment%22%2C%22habanero_direct_messaging_v1%22%3A%22treatment%22%7D%7D&amp;wait=false&amp;rtl=false&amp;publicOptions[buttonHeight]=55&amp;publicOptions[layout][maxColumns]=4&amp;publicOptions[layout][maxRows]=1&amp;publicOptions[layout][overflow]=auto&amp;publicOptions[wallets][applePay]=always&amp;publicOptions[wallets][googlePay]=never&amp;publicOptions[wallets][paypal]=auto&amp;publicOptions[wallets][link]=never&amp;publicOptions[wallets][klarna]=auto&amp;publicOptions[wallets][amazonPay]=auto&amp;publicOptions[__checkout][__linkPurchaseProtectionsData][isEligible]=false&amp;publicOptions[__checkout][__linkPurchaseProtectionsData][type]=shopping&amp;publicOptions[__checkout][__linkProtectionsEligibleAndRolledOut]=false&amp;publicOptions[__checkout][__linkUnrecognizedProtectionsHoldback]=false&amp;publicOptions[__checkout][__automaticTaxEnabled]=false&amp;publicOptions[__checkout][minApplePayVersion]=2&amp;publicOptions[__checkout][minGooglePayVersion][major]=2&amp;publicOptions[__checkout][minGooglePayVersion][minor]=0&amp;publicOptions[__checkout][applePayIdentifierAccount]=acct_1MjJVnBHCBHvYuNP&amp;publicOptions[paymentMethods][applePay]=always&amp;publicOptions[paymentMethods][googlePay]=never&amp;publicOptions[paymentMethods][paypal]=auto&amp;publicOptions[paymentMethods][link]=never&amp;publicOptions[paymentMethods][klarna]=auto&amp;publicOptions[paymentMethods][amazonPay]=auto&amp;elementsInitSource=checkout&amp;elementId=expressCheckout-29cf079a-3458-44c6-bb5b-b90c600c7dfd&amp;componentName=expressCheckout&amp;keyMode=test&amp;apiKey=pk_test_51MjJVnBHCBHvYuNPf0V0re0eSAphcBnwdzvElkR464Kqp3z4LjK7TDNTOVaoFQLdFeung26H8MotrXETecIHM9x500S0TFtdKd&amp;frameMessagingStrategy=direct&amp;referrer=https%3A%2F%2Fcheckout.stripe.com%2Fc%2Fpay%2Fcs_test_a1BDsz1ipJIfvVP7V7URWoQ7IwJg2KLhkndlbBYJM45DAHH1dmRSUMQxEX%23fidkdWxOYHwnPyd1blpxYHZxWjA0SG9PU2tHTUZHTXNccEtVYzVTNXdgNWBWRHVtZkdrcmF%252Fc0BpblcxMzFOdHU2fzFJb04yUUFLUUpTZGpDVElhQ2Bwa2I3M009SGpxd11AUWBmTE1IPH0wNTVWNVFDcWFOYScpJ2hsYXYnP34naHBsYSc%252FJzFnMjUwPDEyKDExZDEoMTUzNig9NWEwKDM3NmdmNTQ1NWZhNzcyMGA1NCcpJ3ZsYSc%252FJzcyN2ZhZ2c8KGMxPTMoMTAwZChkNzNhKGFgMmcyYDUyPGZgMDZgMT0yNycpJ2JwbGEnPycwYWczZz00NSg9MGNjKDFjZjUoPWFgPSg0YTJkYGAzMDJmYTZgPTY1MWEneCknZ2BxZHYnP15YKSdpZHxqcHFRfHVgJz8ndmxrYmlgWmxxYGgnKSd3YGNgd3dgd0p3bGJsayc%252FJ21xcXV2PyoqdnBoaGR3bHZxK3Ngd2ZgaStkdXUneCUl&amp;controllerId=__privateStripeController8931" title="Secure express checkout frame" style="border: 0px !important; margin: -4px; padding: 0px !important; width: calc(100% + 8px); min-width: 100% !important; overflow: hidden !important; display: block !important; user-select: none !important; transform: translate(0px) !important; color-scheme: light only !important; height: 8px;"></iframe>
+        <div className="__PrivateStripeElement" style={{margin: "-4px 0px", padding: "0px", borderWidth: "medium", borderStyle: "none", borderColor: "currentcolor", borderImage: "initial", display: "block", background: "transparent", position: "relative", opacity: "1", transition: "height 0.35s"}}>
+        <iframe name="__privateStripeFrame8934" frameborder="0" allowtransparency="true" scrolling="no" role="presentation" allow="payment *" src="https://js.stripe.com/v3/elements-inner-express-checkout-6d85533135dcacc555cf5a5ce09f6309.html#__shared_params__[version]=v3&amp;__shared_params__[light_experiment_assignments]=%7B%22token%22%3A%22a0b75ea9-ca3a-412d-82a9-4e8713be5903%22%2C%22assignments%22%3A%7B%22habanero_aa_v1%22%3A%22treatment%22%2C%22habanero_direct_messaging_v1%22%3A%22treatment%22%7D%7D&amp;wait=false&amp;rtl=false&amp;publicOptions[buttonHeight]=55&amp;publicOptions[layout][maxColumns]=4&amp;publicOptions[layout][maxRows]=1&amp;publicOptions[layout][overflow]=auto&amp;publicOptions[wallets][applePay]=always&amp;publicOptions[wallets][googlePay]=never&amp;publicOptions[wallets][paypal]=auto&amp;publicOptions[wallets][link]=never&amp;publicOptions[wallets][klarna]=auto&amp;publicOptions[wallets][amazonPay]=auto&amp;publicOptions[__checkout][__linkPurchaseProtectionsData][isEligible]=false&amp;publicOptions[__checkout][__linkPurchaseProtectionsData][type]=shopping&amp;publicOptions[__checkout][__linkProtectionsEligibleAndRolledOut]=false&amp;publicOptions[__checkout][__linkUnrecognizedProtectionsHoldback]=false&amp;publicOptions[__checkout][__automaticTaxEnabled]=false&amp;publicOptions[__checkout][minApplePayVersion]=2&amp;publicOptions[__checkout][minGooglePayVersion][major]=2&amp;publicOptions[__checkout][minGooglePayVersion][minor]=0&amp;publicOptions[__checkout][applePayIdentifierAccount]=acct_1MjJVnBHCBHvYuNP&amp;publicOptions[paymentMethods][applePay]=always&amp;publicOptions[paymentMethods][googlePay]=never&amp;publicOptions[paymentMethods][paypal]=auto&amp;publicOptions[paymentMethods][link]=never&amp;publicOptions[paymentMethods][klarna]=auto&amp;publicOptions[paymentMethods][amazonPay]=auto&amp;elementsInitSource=checkout&amp;elementId=expressCheckout-29cf079a-3458-44c6-bb5b-b90c600c7dfd&amp;componentName=expressCheckout&amp;keyMode=test&amp;apiKey=pk_test_51MjJVnBHCBHvYuNPf0V0re0eSAphcBnwdzvElkR464Kqp3z4LjK7TDNTOVaoFQLdFeung26H8MotrXETecIHM9x500S0TFtdKd&amp;frameMessagingStrategy=direct&amp;referrer=https%3A%2F%2Fcheckout.stripe.com%2Fc%2Fpay%2Fcs_test_a1BDsz1ipJIfvVP7V7URWoQ7IwJg2KLhkndlbBYJM45DAHH1dmRSUMQxEX%23fidkdWxOYHwnPyd1blpxYHZxWjA0SG9PU2tHTUZHTXNccEtVYzVTNXdgNWBWRHVtZkdrcmF%252Fc0BpblcxMzFOdHU2fzFJb04yUUFLUUpTZGpDVElhQ2Bwa2I3M009SGpxd11AUWBmTE1IPH0wNTVWNVFDcWFOYScpJ2hsYXYnP34naHBsYSc%252FJzFnMjUwPDEyKDExZDEoMTUzNig9NWEwKDM3NmdmNTQ1NWZhNzcyMGA1NCcpJ3ZsYSc%252FJzcyN2ZhZ2c8KGMxPTMoMTAwZChkNzNhKGFgMmcyYDUyPGZgMDZgMT0yNycpJ2JwbGEnPycwYWczZz00NSg9MGNjKDFjZjUoPWFgPSg0YTJkYGAzMDJmYTZgPTY1MWEneCknZ2BxZHYnP15YKSdpZHxqcHFRfHVgJz8ndmxrYmlgWmxxYGgnKSd3YGNgd3dgd0p3bGJsayc%252FJ21xcXV2PyoqdnBoaGR3bHZxK3Ngd2ZgaStkdXUneCUl&amp;controllerId=__privateStripeController8931" title="Secure express checkout frame" style={{border: "0px", margin: "-4px", padding: "0px", width: "calc(100% + 8px)", minWidth: "100%", overflow: "hidden", display: "block", userSelect: "none", transform: "translate(0px)", colorScheme: "light only", height: "8px"}}></iframe>
         </div>
         </div>
         </div>
@@ -102,9 +102,9 @@ const SubscribeYear = () => {
         </div>
         </div>
         <form className="PaymentForm-form" novalidate="" id="payment-form">
-        <div style="height: 774.359px;">
+        <div style={{height: "774.359px"}}>
             <div>
-        <div style="opacity: 1;">
+        <div style={{opacity: "1"}}>
         <div className="App-Global-Fields flex-container spacing-16 direction-column wrap-wrap">
         <div className="flex-item width-12">
         <div className="FormFieldGroup-container">
@@ -133,7 +133,7 @@ const SubscribeYear = () => {
         <h2 className="PaymentMethod-Heading Text Text-color--gray800 Text-fontSize--16 Text-fontWeight--500">Payment method</h2>
         </div>
         </div>
-        <div className="PaymentMethodForm" style="opacity: 1; height: auto;">
+        <div className="PaymentMethodForm" style={{opacity: "1", height: "auto"}}>
         <div className="Accordion PaymentMethodFormAccordion" role="list" data-name="paymentMethodFormAccordion">
         <div className="AnimatePresence PaymentMethodFormVisible-container">
         <div className="AnimatePresence-inner">
@@ -148,7 +148,7 @@ const SubscribeYear = () => {
         <div className="AccordionItemHeader-content">
         <div className="flex-container">
         <div className="AccordionItemCover-label">
-        <div className="flex-container direction-row align-items-center wrap-wrap" style="height: auto; width: 100%;">
+        <div className="flex-container direction-row align-items-center wrap-wrap" style={{height: "auto", width: "100%"}}>
         <span className="Text Text-color--gray400 Text-fontSize--13 Text-fontWeight--500">
         </span>
         </div>
@@ -184,7 +184,7 @@ const SubscribeYear = () => {
         <div className="AnimatePresence-inner">
         <div className="AccordionItemContent PaymentMethodFormAccordionItem card-accordion-item PaymentMethodFormAccordionItem--selected PaymentMethodFormAccordionItem--overflowVisible-content AccordionItemContent--no-title"><div>
         <div>
-        <div className="PaymentForm-paymentMethodForm flex-container direction-column wrap-wrap" style="gap: 16px;">
+        <div className="PaymentForm-paymentMethodForm flex-container direction-column wrap-wrap" style={{gap: "16px"}}>
         <div className="flex-item width-12">
         <div className="FormFieldGroup" data-qa="FormFieldGroup-cardForm">
         <div className="FormFieldGroup-labelContainer flex-container justify-content-space-between">
@@ -201,17 +201,17 @@ const SubscribeYear = () => {
         <input className="CheckoutInput CheckoutInput--tabularnums Input Input--empty" autocomplete="cc-number" autocorrect="off" spellcheck="false" id="cardNumber" name="cardNumber" type="text" inputmode="numeric" aria-label="Card number" placeholder="1234 1234 1234 1234" aria-invalid="false" aria-describedby="" data-1p-ignore="false" data-lp-ignore="false" value=""></input>
         </span>
         </div>
-        <div className="FormFieldInput-Icons" style="opacity: 1;">
-        <div style="transform: none;">
+        <div className="FormFieldInput-Icons" style={{opacity: "1"}}>
+        <div style={{transform: "none"}}>
         <span className="FormFieldInput-IconsIcon is-visible">
         <img src="https://js.stripe.com/v3/fingerprinted/img/visa-729c05c240c4bdb47b03ac81d9945bfe.svg" alt="Visa" className="BrandIcon" loading="lazy" fetchpriority="low"></img>
         </span>
         </div>
-        <div style="transform: none;">
+        <div style={{transform: "none"}}>
         <span className="FormFieldInput-IconsIcon is-visible">
         <img src="https://js.stripe.com/v3/fingerprinted/img/mastercard-4d8844094130711885b5e41b28c9848f.svg" alt="MasterCard" className="BrandIcon" loading="lazy" fetchpriority="low"></img></span>
         </div>
-        <div style="transform: none;">
+        <div style={{transform: "none"}}>
         <span className="FormFieldInput-IconsIcon is-visible">
         <img src="https://js.stripe.com/v3/fingerprinted/img/amex-a49b82f46c5cd6a96a6e418a6ca1717c.svg" alt="American Express" className="BrandIcon" loading="lazy" fetchpriority="low"></img></span>
         </div>
@@ -259,13 +259,13 @@ const SubscribeYear = () => {
         </div>
         </div>
         </div>
-        <div className="FieldError-container" style="opacity: 0; height: 0px; margin-top: 0px;">
+        <div className="FieldError-container" style={{opacity: "0", height: "0px", marginTop: "0px"}}>
         <span className="FieldError Text Text-color--red Text-fontSize--13">
         <span aria-hidden="true"></span>
         </span>
         </div>
         </div>
-        <div className="FieldError-container" style="opacity: 0; height: 0px; margin-top: 0px;">
+        <div className="FieldError-container" style={{opacity: "0", height: "0px", marginTop: "0px"}}>
         <span className="FieldError Text Text-color--red Text-fontSize--13">
         <span aria-hidden="true"></span>
         </span>
@@ -277,7 +277,7 @@ const SubscribeYear = () => {
         <div className="AnimateSinglePresence">
         <div className="AnimateSinglePresenceItem">
         <div>
-        <div className="BillingInfoForm-addressInput flex-item width-12" aria-hidden="false" style="margin-top: 0px;">
+        <div className="BillingInfoForm-addressInput flex-item width-12" aria-hidden="false" style={{marginTop: "0px"}}>
         <div role="group" aria-label="Billing address">
         <div className="flex-container spacing-16 direction-column wrap-wrap">
         <div className="flex-item width-12">
@@ -297,13 +297,13 @@ const SubscribeYear = () => {
         </div>
         </div>
         </div>
-        <div className="FieldError-container" style="opacity: 0; height: 0px; margin-top: 0px;">
+        <div className="FieldError-container" style={{opacity: "0", height: "0px", marginTop: "0px"}}>
         <span className="FieldError Text Text-color--red Text-fontSize--13">
         <span aria-hidden="true"></span>
         </span>
         </div>
         </div>
-        <div className="FieldError-container" style="opacity: 0; height: 0px; margin-top: 0px;">
+        <div className="FieldError-container" style={{opacity: "0", height: "0px", marginTop: "0px"}}>
         <span className="FieldError Text Text-color--red Text-fontSize--13">
         <span aria-hidden="true"></span>
         </span>
@@ -383,13 +383,13 @@ const SubscribeYear = () => {
         </div>
         </div>
         </div>
-        <div className="FieldError-container" style="opacity: 0; height: 0px; margin-top: 0px;">
+        <div className="FieldError-container" style={{opacity: "0", height: "0px", marginTop: "0px"}}>
         <span className="FieldError Text Text-color--red Text-fontSize--13">
         <span aria-hidden="true"></span>
         </span>
         </div>
         </div>
-        <div className="FieldError-container" style="opacity: 0; height: 0px; margin-top: 0px;">
+        <div className="FieldError-container" style={{opacity: "0", height: "0px", marginTop: "0px"}}>
         <span className="FieldError Text Text-color--red Text-fontSize--13">
         <span aria-hidden="true"></span>
         </span>
@@ -423,7 +423,7 @@ const SubscribeYear = () => {
         </div>
         </div>
         </div>
-        <div className="AnimatePresence PaymentMethodFormVisible-container" style="">
+        <div className="AnimatePresence PaymentMethodFormVisible-container">
         <div className="AnimatePresence-inner">
         <div className="AnimateSinglePresence PaymentMethodFormAccordionItem-container">
         <div className="AnimateSinglePresenceItem">
@@ -436,7 +436,7 @@ const SubscribeYear = () => {
         <div className="AccordionItemHeader-content">
         <div className="flex-container">
         <div className="AccordionItemCover-label">
-        <div className="flex-container direction-row align-items-center wrap-wrap" style="height: auto; width: 100%;">
+        <div className="flex-container direction-row align-items-center wrap-wrap" style={{height: "auto", width: "100%"}}>
         <span className="Text Text-color--gray400 Text-fontSize--13 Text-fontWeight--500"></span>
         </div>
         </div>
@@ -487,15 +487,15 @@ const SubscribeYear = () => {
         <div className="flex-item width-12"></div>
         <div className="flex-item width-12">
         <div className="ConfirmPaymentButton--SubmitButton">
-        <div data-testid="submit-wallet-button" style="display: none;">
+        <div data-testid="submit-wallet-button" style={{display: "none"}}>
         <div className="ElementsExpressCheckoutElement StripeElement" data-testid="express-checkout-element">
-        <div className="__PrivateStripeElement" style="margin: -4px 0px !important; padding: 0px !important; border-width: medium !important; border-style: none !important; border-color: currentcolor !important; border-image: initial !important; display: block !important; background: transparent !important; position: relative !important; opacity: 1 !important; transition: height 0.35s !important;">
-        <iframe name="__privateStripeFrame8936" frameborder="0" allowtransparency="true" scrolling="no" role="presentation" allow="payment *" src="https://js.stripe.com/v3/elements-inner-express-checkout-6d85533135dcacc555cf5a5ce09f6309.html#__shared_params__[version]=v3&amp;__shared_params__[light_experiment_assignments]=%7B%22token%22%3A%22a0b75ea9-ca3a-412d-82a9-4e8713be5903%22%2C%22assignments%22%3A%7B%22habanero_aa_v1%22%3A%22treatment%22%2C%22habanero_direct_messaging_v1%22%3A%22treatment%22%7D%7D&amp;wait=false&amp;rtl=false&amp;publicOptions[buttonHeight]=55&amp;publicOptions[layout][maxColumns]=4&amp;publicOptions[layout][maxRows]=1&amp;publicOptions[layout][overflow]=auto&amp;publicOptions[wallets][applePay]=always&amp;publicOptions[wallets][googlePay]=auto&amp;publicOptions[wallets][paypal]=never&amp;publicOptions[wallets][link]=never&amp;publicOptions[wallets][klarna]=never&amp;publicOptions[wallets][amazonPay]=never&amp;publicOptions[__checkout][__automaticTaxEnabled]=false&amp;publicOptions[__checkout][minApplePayVersion]=2&amp;publicOptions[__checkout][minGooglePayVersion][major]=2&amp;publicOptions[__checkout][minGooglePayVersion][minor]=0&amp;publicOptions[__checkout][applePayIdentifierAccount]=acct_1MjJVnBHCBHvYuNP&amp;publicOptions[__checkout][isCarouselWallet]=true&amp;publicOptions[paymentMethods][applePay]=always&amp;publicOptions[paymentMethods][googlePay]=auto&amp;publicOptions[paymentMethods][paypal]=never&amp;publicOptions[paymentMethods][link]=never&amp;publicOptions[paymentMethods][klarna]=never&amp;publicOptions[paymentMethods][amazonPay]=never&amp;elementsInitSource=checkout&amp;elementId=expressCheckout-7c94afa1-47d7-43c7-bea8-dbf9c9e80b2e&amp;componentName=expressCheckout&amp;keyMode=test&amp;apiKey=pk_test_51MjJVnBHCBHvYuNPf0V0re0eSAphcBnwdzvElkR464Kqp3z4LjK7TDNTOVaoFQLdFeung26H8MotrXETecIHM9x500S0TFtdKd&amp;frameMessagingStrategy=direct&amp;referrer=https%3A%2F%2Fcheckout.stripe.com%2Fc%2Fpay%2Fcs_test_a1BDsz1ipJIfvVP7V7URWoQ7IwJg2KLhkndlbBYJM45DAHH1dmRSUMQxEX%23fidkdWxOYHwnPyd1blpxYHZxWjA0SG9PU2tHTUZHTXNccEtVYzVTNXdgNWBWRHVtZkdrcmF%252Fc0BpblcxMzFOdHU2fzFJb04yUUFLUUpTZGpDVElhQ2Bwa2I3M009SGpxd11AUWBmTE1IPH0wNTVWNVFDcWFOYScpJ2hsYXYnP34naHBsYSc%252FJzFnMjUwPDEyKDExZDEoMTUzNig9NWEwKDM3NmdmNTQ1NWZhNzcyMGA1NCcpJ3ZsYSc%252FJzcyN2ZhZ2c8KGMxPTMoMTAwZChkNzNhKGFgMmcyYDUyPGZgMDZgMT0yNycpJ2JwbGEnPycwYWczZz00NSg9MGNjKDFjZjUoPWFgPSg0YTJkYGAzMDJmYTZgPTY1MWEneCknZ2BxZHYnP15YKSdpZHxqcHFRfHVgJz8ndmxrYmlgWmxxYGgnKSd3YGNgd3dgd0p3bGJsayc%252FJ21xcXV2PyoqdnBoaGR3bHZxK3Ngd2ZgaStkdXUneCUl&amp;controllerId=__privateStripeController8931" title="Secure express checkout frame" style="border: 0px !important; margin: -4px; padding: 0px !important; width: calc(100% + 8px); min-width: 100% !important; overflow: hidden !important; display: block !important; user-select: none !important; transform: translate(0px) !important; color-scheme: light only !important; height: 0px;"></iframe>
+        <div className="__PrivateStripeElement" style={{margin: "-4px 0px", padding: "0px", borderWidth: "medium", borderStyle: "none", borderColor: "currentcolor", borderImage: "initial", display: "block", background: "transparent", position: "relative", opacity: "1", transition: "height 0.35s"}}>
+        <iframe name="__privateStripeFrame8936" frameborder="0" allowtransparency="true" scrolling="no" role="presentation" allow="payment *" src="https://js.stripe.com/v3/elements-inner-express-checkout-6d85533135dcacc555cf5a5ce09f6309.html#__shared_params__[version]=v3&amp;__shared_params__[light_experiment_assignments]=%7B%22token%22%3A%22a0b75ea9-ca3a-412d-82a9-4e8713be5903%22%2C%22assignments%22%3A%7B%22habanero_aa_v1%22%3A%22treatment%22%2C%22habanero_direct_messaging_v1%22%3A%22treatment%22%7D%7D&amp;wait=false&amp;rtl=false&amp;publicOptions[buttonHeight]=55&amp;publicOptions[layout][maxColumns]=4&amp;publicOptions[layout][maxRows]=1&amp;publicOptions[layout][overflow]=auto&amp;publicOptions[wallets][applePay]=always&amp;publicOptions[wallets][googlePay]=auto&amp;publicOptions[wallets][paypal]=never&amp;publicOptions[wallets][link]=never&amp;publicOptions[wallets][klarna]=never&amp;publicOptions[wallets][amazonPay]=never&amp;publicOptions[__checkout][__automaticTaxEnabled]=false&amp;publicOptions[__checkout][minApplePayVersion]=2&amp;publicOptions[__checkout][minGooglePayVersion][major]=2&amp;publicOptions[__checkout][minGooglePayVersion][minor]=0&amp;publicOptions[__checkout][applePayIdentifierAccount]=acct_1MjJVnBHCBHvYuNP&amp;publicOptions[__checkout][isCarouselWallet]=true&amp;publicOptions[paymentMethods][applePay]=always&amp;publicOptions[paymentMethods][googlePay]=auto&amp;publicOptions[paymentMethods][paypal]=never&amp;publicOptions[paymentMethods][link]=never&amp;publicOptions[paymentMethods][klarna]=never&amp;publicOptions[paymentMethods][amazonPay]=never&amp;elementsInitSource=checkout&amp;elementId=expressCheckout-7c94afa1-47d7-43c7-bea8-dbf9c9e80b2e&amp;componentName=expressCheckout&amp;keyMode=test&amp;apiKey=pk_test_51MjJVnBHCBHvYuNPf0V0re0eSAphcBnwdzvElkR464Kqp3z4LjK7TDNTOVaoFQLdFeung26H8MotrXETecIHM9x500S0TFtdKd&amp;frameMessagingStrategy=direct&amp;referrer=https%3A%2F%2Fcheckout.stripe.com%2Fc%2Fpay%2Fcs_test_a1BDsz1ipJIfvVP7V7URWoQ7IwJg2KLhkndlbBYJM45DAHH1dmRSUMQxEX%23fidkdWxOYHwnPyd1blpxYHZxWjA0SG9PU2tHTUZHTXNccEtVYzVTNXdgNWBWRHVtZkdrcmF%252Fc0BpblcxMzFOdHU2fzFJb04yUUFLUUpTZGpDVElhQ2Bwa2I3M009SGpxd11AUWBmTE1IPH0wNTVWNVFDcWFOYScpJ2hsYXYnP34naHBsYSc%252FJzFnMjUwPDEyKDExZDEoMTUzNig9NWEwKDM3NmdmNTQ1NWZhNzcyMGA1NCcpJ3ZsYSc%252FJzcyN2ZhZ2c8KGMxPTMoMTAwZChkNzNhKGFgMmcyYDUyPGZgMDZgMT0yNycpJ2JwbGEnPycwYWczZz00NSg9MGNjKDFjZjUoPWFgPSg0YTJkYGAzMDJmYTZgPTY1MWEneCknZ2BxZHYnP15YKSdpZHxqcHFRfHVgJz8ndmxrYmlgWmxxYGgnKSd3YGNgd3dgd0p3bGJsayc%252FJ21xcXV2PyoqdnBoaGR3bHZxK3Ngd2ZgaStkdXUneCUl&amp;controllerId=__privateStripeController8931" title="Secure express checkout frame" style={{border: "0px", margin: "-4px", padding: "0px", width: "calc(100% + 8px)", minWidth: "100%", overflow: "hidden", display: "block", userSelect: "none", transform: "translate(0px)", colorScheme: "light only", height: "0px"}}></iframe>
         </div>
         </div>
         </div>
-        <button className="SubmitButton SubmitButton--incomplete" type="submit" data-testid="hosted-payment-submit-button" style="background-color: rgb(0, 116, 212); color: rgb(255, 255, 255);">
-        <div className="SubmitButton-Shimmer" style="background: linear-gradient(to right, rgba(0, 116, 212, 0) 0%, rgb(58, 139, 238) 50%, rgba(0, 116, 212, 0) 100%);"></div>
+        <button className="SubmitButton SubmitButton--incomplete" type="submit" data-testid="hosted-payment-submit-button" style={{backgroundColor: "rgb(0, 116, 212); color: rgb(255, 255, 255)"}}>
+        <div className="SubmitButton-Shimmer" style={{background: "linear-gradient(to right, rgba(0, 116, 212, 0) 0%, rgb(58, 139, 238) 50%, rgba(0, 116, 212, 0) 100%)"}}></div>
         <div className="SubmitButton-TextContainer">
         <span className="SubmitButton-Text SubmitButton-Text--current Text Text-color--default Text-fontWeight--500 Text--truncate" aria-hidden="false">Subscribe</span>
         <span className="SubmitButton-Text SubmitButton-Text--pre Text Text-color--default Text-fontWeight--500 Text--truncate" aria-hidden="true" data-testid="submit-button-processing-label">Processing</span>
@@ -505,7 +505,7 @@ const SubscribeYear = () => {
         <div className="Icon Icon--md">
         <div className="Icon Icon--md Icon--square">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false">
-        <ellipse cx="12" cy="12" rx="10" ry="10" style="stroke: rgb(255, 255, 255);"></ellipse>
+        <ellipse cx="12" cy="12" rx="10" ry="10" style={{stroke: "rgb(255, 255, 255)"}}></ellipse>
         </svg>
         </div>
         </div>
