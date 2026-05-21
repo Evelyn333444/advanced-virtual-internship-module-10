@@ -1547,7 +1547,267 @@ audio {
     appearance: none;
 }
 
-/*Subscription payment page*/
+/* Subscription checkout (monthly / yearly) */
+
+.subscribe-checkout {
+  --checkout-bg: #ffffff;
+  --checkout-border: #e6e6e6;
+  --checkout-text: #30313d;
+  --checkout-text-muted: #6d6e78;
+  --checkout-text-light: #a3acb9;
+  --checkout-accent: #0074d4;
+  --checkout-surface: #f7f8f9;
+  --checkout-radius: 8px;
+  --checkout-max-width: 520px;
+  --checkout-gutter: 24px;
+  min-height: 100vh;
+  background: var(--checkout-bg);
+  color: var(--checkout-text);
+  display: flex;
+  flex-direction: column;
+}
+
+.subscribe-checkout__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: var(--checkout-gutter);
+  border-bottom: 1px solid var(--checkout-border);
+}
+
+.subscribe-checkout__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--checkout-text);
+}
+
+.subscribe-checkout__back:hover {
+  color: var(--checkout-accent);
+}
+
+.subscribe-checkout__brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.subscribe-checkout__brand h1 {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.subscribe-checkout__brand-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: var(--checkout-surface);
+}
+
+.subscribe-checkout__sandbox {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--checkout-text-muted);
+  background: var(--checkout-surface);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.subscribe-checkout__layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  flex: 1;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.subscribe-checkout__summary {
+  padding: 32px var(--checkout-gutter);
+  text-align: center;
+  border-bottom: 1px solid var(--checkout-border);
+}
+
+.subscribe-checkout__plan-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--checkout-text-muted);
+  margin-bottom: 16px;
+}
+
+.subscribe-checkout__price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.subscribe-checkout__price-amount {
+  font-size: 32px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.subscribe-checkout__price-interval {
+  font-size: 14px;
+  color: var(--checkout-text-muted);
+}
+
+.subscribe-checkout__main {
+  padding: 24px var(--checkout-gutter) 40px;
+  width: 100%;
+}
+
+.subscribe-checkout__form {
+  max-width: var(--checkout-max-width);
+  margin: 0 auto;
+}
+
+.subscribe-checkout__section {
+  margin-bottom: 28px;
+}
+
+.subscribe-checkout__section h2 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.subscribe-checkout__method-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  border: 1px solid var(--checkout-border);
+  border-radius: var(--checkout-radius);
+  background: var(--checkout-surface);
+}
+
+.subscribe-checkout__method-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.subscribe-checkout__field {
+  margin-bottom: 14px;
+}
+
+.subscribe-checkout__field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--checkout-text-muted);
+  margin-bottom: 6px;
+}
+
+.subscribe-checkout__field input,
+.subscribe-checkout__field select {
+  width: 100%;
+  height: 44px;
+  padding: 0 12px;
+  font-size: 16px;
+  color: var(--checkout-text);
+  background: var(--checkout-bg);
+  border: 1px solid var(--checkout-border);
+  border-radius: var(--checkout-radius);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.subscribe-checkout__field input:focus,
+.subscribe-checkout__field select:focus {
+  border-color: var(--checkout-accent);
+  box-shadow: 0 0 0 3px rgba(0, 116, 212, 0.15);
+}
+
+.subscribe-checkout__field input[readonly] {
+  background: var(--checkout-surface);
+  color: var(--checkout-text-muted);
+  cursor: default;
+}
+
+.subscribe-checkout__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.subscribe-checkout__submit {
+  width: 100%;
+  height: 52px;
+  margin-top: 8px;
+  border: none;
+  border-radius: var(--checkout-radius);
+  background: var(--checkout-accent);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.subscribe-checkout__submit:hover {
+  background: #0063b8;
+}
+
+.subscribe-checkout__terms {
+  margin-top: 16px;
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--checkout-text-light);
+}
+
+.subscribe-checkout__footer {
+  padding: 24px var(--checkout-gutter) 32px;
+  border-top: 1px solid var(--checkout-border);
+}
+
+.subscribe-checkout__footer .JOHDf_Xc__Footer {
+  margin: 0;
+}
+
+@media (min-width: 992px) {
+  .subscribe-checkout__layout {
+    grid-template-columns: minmax(280px, 1fr) minmax(360px, 1.2fr);
+    align-items: start;
+  }
+
+  .subscribe-checkout__summary {
+    position: sticky;
+    top: 0;
+    text-align: left;
+    padding: 48px 40px;
+    border-bottom: none;
+    border-right: 1px solid var(--checkout-border);
+    min-height: calc(100vh - 73px);
+  }
+
+  .subscribe-checkout__price {
+    justify-content: flex-start;
+  }
+
+  .subscribe-checkout__main {
+    padding: 48px 40px;
+  }
+}
+
+/* Legacy Stripe checkout classes (subscribe year page) */
 
 hr {
     box-sizing: content-box;
