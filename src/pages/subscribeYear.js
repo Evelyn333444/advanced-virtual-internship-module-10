@@ -52,7 +52,7 @@ const SubscribeYear = () => {
         </div>
         <div className="flex-item width-fixed">
         <span className="ProductSummaryTotalAmount-billingInterval Text Text-color--gray500 Text-fontSize--14">
-        <div>per <br className="BillingIntervalBreak">year</br></div>
+        <div>per <br className="BillingIntervalBreak" />month</div>
         </span>
         </div>
         </div>

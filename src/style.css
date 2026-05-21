@@ -1549,18 +1549,419 @@ audio {
 
 /*Subscription payment page*/
 
-.__PrivateStripeElement {
-  margin: "-4px 0px";
-  padding: "0px" !important;
-  border-width: "medium" !important;
-  border-style: "none" !important;
-  border-color: "currentcolor" !important;
-  border-image: "initial" !important;
-  display: "block" !important;
-  background: "transparent" !important;
-  position: "relative" !important;
-  opacity: "1" !important;
-  transition: "height 0.35s" !important;
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+hr {
+    display: block;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    color: gray;
+    unicode-bidi: isolate;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+}
+
+.Icon {
+    -webkit-transform: translate(0);
+    -ms-transform: translate(0);
+    transform: translate(0);
+}
+
+.flex-container {
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+.ButtonAndDividerContainer, .PaymentHeaderContainer {
+    width: 100%;
+}
+
+.ButtonContainer {
+    height: var(--button-height-xlg);
+    margin-bottom: var(--space-3);
+    position: relative;
+    width: 100%;
+}
+
+.ButtonAndDividerContainer .Divider {
+    padding-bottom: var(--space-4);
+    padding-top: var(--space-4);
+}
+
+.Divider {
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+.Divider {
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.Divider-Text {
+    background-color: var(--checkout-white);
+    left: 50%;
+    padding: 0 var(--space-2);
+    position: absolute;
+    text-transform: uppercase;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    transition: background-color .3s ease-in-out .5s;
+    white-space: nowrap;
+}
+
+.direction-column {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.Icon--md {
+    height: var(--checkout-icon-md);
+}
+
+.Icon {
+    -webkit-transform: translate(0);
+    -ms-transform: translate(0);
+    transform: translate(0);
+}
+
+.PaymentForm-form {
+    scroll-margin-top: calc(var(--checkout-app-gutter-width) + var(--button-height-xlg) + var(--space-5));
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: top;
+    -ms-transform-origin: top;
+    transform-origin: top;
+    transition: opacity var(--checkout-form-expansion-duration) ease-out, -webkit-transform var(--checkout-form-expansion-duration) ease-out;
+    transition: opacity var(--checkout-form-expansion-duration) ease-out, transform var(--checkout-form-expansion-duration) ease-out;
+    transition: opacity var(--checkout-form-expansion-duration) ease-out, transform var(--checkout-form-expansion-duration) ease-out, -webkit-transform var(--checkout-form-expansion-duration) ease-out;
+}
+
+.App-Payment {
+    background-color: var(--checkout-white);
+    padding-top: var(--space-5);
+    transition: background-color var(--checkout-form-expansion-duration) ease-out;
+    z-index: 1;
+}
+
+.App-Global-Fields {
+    margin-bottom: var(--space-2);
+}
+
+.PaymentHeader {
+    padding-bottom: var(--space-4);
+}
+
+.PaymentRequestOrHeader {
+    position: relative;
+}
+
+.App-Container .App {
+    -webkit-animation: enter-no-scale .6s;
+    animation: enter-no-scale .6s;
+    position: relative;
+}
+
+.App-Footer {
+    padding-top: var(--checkout-app-gutter-width);
+}
+
+.App {
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-top: 0;
+    width: 100%;
+}
+
+.App-Overview, .App-Payment {
+    padding: 0 var(--checkout-app-gutter-width) var(--space-5);
+    width: 100%;
+}
+
+.App-Overview>*, .App-Payment>* {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--checkout-app-tablet-constraint);
+}
+
+.PaymentMethod-Heading {
+    margin-top: var(--space-3);
+}
+
+.flex-item {
+    box-sizing: border-box;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.flex-item:empty {
+    display: none;
+}
+
+.ReadOnlyFormField-action {
+    -ms-flex-preferred-size: auto;
+    -ms-flex-negative: 0;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-basis: auto;
+    flex-basis: auto;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    font-size: 12px;
+}
+
+.ReadOnlyFormField-title {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    min-width: 0;
+}
+
+.ReadOnlyFormField-title {
+    color: var(--checkout-gray800);
+    font-size: 14px;
+    overflow: hidden;
+    padding-right: var(--space-2);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ReadOnlyFormField-titleContainer {
+    -ms-flex-pack: justify;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    min-width: 0;
+}
+
+.ReadOnlyFormField-container {
+    padding: var(--space-4);
+}
+
+.ReadOnlyFormField-contentContainer {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    min-width: 0;
+}
+
+.ReadOnlyFormField-label {
+    -ms-flex-negative: 0;
+    color: var(--checkout-gray500);
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    font-size: 14px;
+    width: 30%;
+}
+
+.ReadOnlyForm-container {
+    width: 100%;
+}
+
+.ReadOnlyForm--withShadow {
+    box-shadow: var(--border-box-shadow);
+    overflow: hidden;
+}
+
+.ReadOnlyForm {
+    background-color: var(--checkout-gray-light);
+    border-radius: var(--rounded);
+    margin: var(--space-1) 0 0 0;
+    width: 100%;
+}
+
+.ReadOnlyForm .ReadOnlyFormField:first-child {
+    border-top: none;
+}
+
+.FormFieldGroup-container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.ProductSummaryTotalAmount-billingInterval {
+    display: inline-block;
+}
+
+.ProductSummary, .ProductSummary-info {
+    -ms-flex-pack: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.ProductSummary-buttonsContainer:empty {
+    margin-top: 0;
+}
+
+.ProductSummary-buttonsContainer {
+    -ms-flex-pack: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    gap: var(--space-3);
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-top: var(--space-2);
+}
+
+.ProductSummary-info {
+    width: 100%;
+}
+
+.ProductSummary-name {
+    word-break: break-word;
+}
+
+.ProductSummary {
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    cursor: default;
+    text-align: center;
+}
+
+.ProductSummary-amountsContainer {
+    position: relative;
+}
+
+.OrderSummaryColumn {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.Accordion {
+    background-color: var(--checkout-white);
+    border-radius: var(--rounded);
+    box-shadow: var(--border-box-shadow);
+    margin: var(--space-1) 0 0 0;
+}
+
+.SubmitButton {
+    --button-height: var(--button-height-xlg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 0;
+    border-radius: var(--rounded);
+    box-shadow: var(--submit-button-shadow);
+    color: var(--checkout-white);
+    cursor: pointer;
+    display: block;
+    height: var(--button-height);
+    outline: none;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    transition: all var(--default-transition), box-shadow .08s ease-in;
+    width: 100%;
+}
+
+button, select {
+    text-transform: none;
+}
+
+.SubmitButton-Shimmer {
+    bottom: 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    -webkit-transform: translateX(calc(var(--shimmer-width) * -1));
+    -ms-transform: translateX(calc(var(--shimmer-width)*-1));
+    transform: translateX(calc(var(--shimmer-width) * -1));
+    transition: opacity var(--default-transition);
+    width: var(--shimmer-width);
+}
+
+ConfirmPayment .SubmitButton-Icon, .ConfirmPayment .SubmitButton-Text {
+    transition: none;
+}
+
+.SubmitButton--incomplete .SubmitButton-Text--current {
+    opacity: .6;
+}
+
+.SubmitButton-Text {
+    left: 0;
+    line-height: var(--button-height);
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transition: all var(--default-transition);
+    width: 100%;
+}
+
+.SubmitButton-Text--pre {
+    opacity: 0;
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
 }
 
 .SubmitButton-IconContainer {
@@ -1598,123 +1999,35 @@ audio {
     transition: all var(--default-transition);
 }
 
-.wrap-wrap {
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+.SubmitButton-SpinnerIcon .Icon.Icon--md, .SubmitButton-SpinnerIcon svg {
+    height: var(--spinner-width);
+    width: var(--spinner-width);
 }
 
-.align-items-baseline {
-    -ms-flex-align: baseline;
-    -webkit-align-items: baseline;
-    align-items: baseline;
+.SubmitButton-SpinnerIcon ellipse {
+    stroke-width: 1;
+    stroke-linecap: round;
+    stroke-dasharray: 70;
+    stroke-dashoffset: 30;
+    fill: transparent;
+    -webkit-animation: spinner-spin .6s linear infinite;
+    animation: spinner-spin .6s linear infinite;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
 }
 
-.align-items-flex-start {
-    -ms-flex-align: start;
-    -webkit-align-items: flex-start;
-    align-items: flex-start;
+.SubmitButton-CheckmarkIcon {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(calc(-50% + .5px)) translateX(-50%) scale(.6);
+    -ms-transform: translateY(calc(-50% + .5px)) translateX(-50%) scale(.6);
+    transform: translateY(calc(-50% + .5px)) translateX(-50%) scale(.6);
 }
 
-.justify-content-space-between {
-    -ms-flex-pack: justify;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
-}
-
-.direction-row {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-}
-
-.ProductSummary-name {
-    word-break: break-word;
-}
-
-.ProductSummary-amountsContainer {
-    position: relative;
-}
-
-.ProductSummary-totalAmount {
-    font-size: var(--checkout-product-summary-total-font-default);
-    margin: var(--space-0) 0 3px;
-}
-
-.App-Container .App {
-    -webkit-animation: enter-no-scale .6s;
-    animation: enter-no-scale .6s;
-    position: relative;
-}
-
-.App {
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    margin-top: 0;
-    width: 100%;
-}
-
-.wEAIlV87__Header {
-    margin-bottom: var(--space-6);
-    z-index: var(--checkout-z-index-header);
-}
-
-.aYuOZURb__Header-content {
-    -ms-flex-pack: justify;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
-}
-
-.align-items-stretch {
-    -ms-flex-align: stretch;
-    -webkit-align-items: stretch;
-    align-items: stretch;
-}
-
-.flex-container {
-    box-sizing: border-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-}
-
-.width-auto, .width-fixed {
-    -ms-flex-preferred-size: auto;
-    -webkit-flex-basis: auto;
-    flex-basis: auto;
-}
-
-.width-12 {
-    width: 100%;
-}
-
-.width-auto {
-    width: auto;
-}
-
-.align-items-center {
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-}
-
-.flex-item {
-    box-sizing: border-box;
-    -webkit-flex: 0 1 auto;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
-    max-width: 100%;
-    min-width: 0;
+.ConfirmPayment-PostSubmit>* {
+    margin-top: var(--space-3);
 }
 
 .Link--primary {
@@ -1726,50 +2039,55 @@ audio {
     text-decoration: none;
 }
 
-.alXgr_l1__BusinessLink--withArrow {
-    margin-left: calc(var(--space-5) * -1);
-    padding-left: var(--space-5);
+.mr2 {
+    margin-right: var(--space-2);
 }
 
-.alXgr_l1__BusinessLink--withArrow, .i7-BfIyQ__BusinessLink--withBusinessNameLabel {
-    min-width: 60px;
+.mt5 {
+    margin-top: var(--space-5);
 }
 
-.NTVCZeIn__BusinessLink {
-    display: block;
+.width-fixed {
+    -ms-flex-negative: 0;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
 }
 
-.l-dw6QUX__BusinessLink-backArrowContainer {
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+.width-auto, .width-fixed {
+    -ms-flex-preferred-size: auto;
+    -webkit-flex-basis: auto;
+    flex-basis: auto;
 }
 
-.BillingIntervalBreak {
-    display: none;
+.width-grow {
+    -ms-flex-preferred-size: 0;
+    -ms-flex-positive: 1;
+    -webkit-flex-basis: 0;
+    flex-basis: 0;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
 }
 
-.BjJO-0hk__BusinessLink-backLabel {
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    -webkit-transform: translateX(var(--space-1));
-    -ms-transform: translateX(var(--space-1));
-    transform: translateX(var(--space-1));
+.width-12 {
+    width: 100%;
+}
+
+.Text--truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .Text-color--gray800 {
     color: var(--checkout-gray800);
 }
-.Text-fontSize--13 {
-    font-size: var(--checkout-font-size-13);
-}
 
 .Text-fontWeight--600 {
     font-weight: 600;
+}
+
+.Text-color--gray500 {
+    color: var(--checkout-gray500);
 }
 
 .Text-fontWeight--500 {
@@ -1792,6 +2110,10 @@ audio {
     font-size: var(--checkout-font-size-14);
 }
 
+.Text-fontSize--13 {
+    font-size: var(--checkout-font-size-13);
+}
+
 .Text-fontSize--12 {
     font-size: var(--checkout-font-size-12);
 }
@@ -1805,56 +2127,32 @@ audio {
     letter-spacing: -.03rem;
 }
 
-.Text--truncate {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+.AnimateSinglePresence {
+    --animateSinglePresenceDurationHeight: var(--transitionHeightDuration);
+    --animateSinglePresenceDelayHeight: 0s;
+    --animateSinglePresenceEnterDurationOpacity: var(--transitionHeightDuration);
+    --animateSinglePresenceExitDurationOpacity: var(--transitionHeightDuration);
+    --animateSinglePresenceEnterDelayOpacity: 0s;
+    --animateSinglePresenceExitDelayOpacity: 0s;
+    --animateSinglePresenceTimingFunction: var(--transitionHeightTimingFunction);
 }
 
-.Pd_4lI3L__BusinessLink-content {
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    min-width: 0;
-    transition: -webkit-transform .25s ease;
-    transition: transform .25s ease;
-    transition: transform .25s ease, -webkit-transform .25s ease;
+.AnimateSinglePresence {
+    position: relative;
+    transition: height var(--animateSinglePresenceDurationHeight) var(--animateSinglePresenceTimingFunction) var(--animateSinglePresenceDelayHeight);
 }
 
-._83elD2bt__Business {
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    max-width: 100%;
-    min-width: 0;
-}
+    .wEAIlV87__Header {
+        background-color: var(--checkout-white);
+        border-bottom: 1px solid transparent;
+        margin-bottom: var(--checkout-app-gutter-width);
+        padding: var(--checkout-app-gutter-width);
+        width: 100%;
+    }
 
-.mr2 {
-    margin-right: var(--space-2);
-}
-
-.SubmitButton-SpinnerIcon .Icon.Icon--md, .SubmitButton-SpinnerIcon svg {
-    height: var(--spinner-width);
-    width: var(--spinner-width);
-}
-
-.SubmitButton-CheckmarkIcon {
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(calc(-50% + .5px)) translateX(-50%) scale(.6);
-    -ms-transform: translateY(calc(-50% + .5px)) translateX(-50%) scale(.6);
-    transform: translateY(calc(-50% + .5px)) translateX(-50%) scale(.6);
-}
-
-.ConfirmPayment-PostSubmit>* {
-    margin-top: var(--space-3);
+    .wEAIlV87__Header {
+    margin-bottom: var(--space-6);
+    z-index: var(--checkout-z-index-header);
 }
 
 .B4eU5jRx__ConfirmTerms {
@@ -1862,95 +2160,8 @@ audio {
     text-align: center;
 }
 
-.Icon--md.Icon--square {
-    width: var(--checkout-icon-md);
-}
-
-.Icon--sm {
-    height: var(--checkout-icon-sm);
-}
-
-.Icon {
-    -webkit-transform: translate(0);
-    -ms-transform: translate(0);
-    transform: translate(0);
-}
-
-.PsuKjvO4__HeaderImage-fallbackIcon {
-    fill: var(--checkout-gray400);
-}
-
-.Icon--sm {
-    height: var(--checkout-icon-sm);
-}
-
-.Icon {
-    -webkit-transform: translate(0);
-    -ms-transform: translate(0);
-    transform: translate(0);
-}
-
-._83elD2bt__Business:not(.XKfFlMzi__is-darkBackground) .LuOo3E3-__Business-name.LuOo3E3-__Business-name {
-    color: var(--checkout-gray800);
-}
-
-._2cHAhMuN__SandboxTestingBadgeComponent {
-    fill: var(--checkout-white);
-    -ms-flex-align: center;
-    -ms-flex-pack: normal;
-    -webkit-align-items: center;
-    align-items: center;
-    background-color: var(--sandbox-badge-background-color);
-    border: var(--sandbox-badge-border);
-    border-color: var(--sandbox-badge-background-color);
-    border-radius: var(--sandbox-badge-border-radius-xsmall);
-    color: var(--checkout-white);
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    font-family: var(--sandbox-badge-label-small-emphasized-font-family);
-    font-size: var(--sandbox-badge-label-small-emphasized-font-size);
-    font-weight: var(--sandbox-badge-label-small-emphasized-font-weight);
-    gap: var(--sandbox-badge-gap);
-    height: var(--sandbox-badge-height);
-    -webkit-justify-content: normal;
-    justify-content: normal;
-    line-height: var(--sandbox-badge-label-small-emphasized-line-height);
-    margin-left: var(--sandbox-badge-margin-small);
-    margin-right: var(--sandbox-badge-margin-small);
-    padding: var(--sandbox-badge-paddingY) var(--sandbox-badge-padding-space-75);
-    white-space: nowrap;
-}
-
-.App-Payment {
-    background-color: var(--checkout-white);
-    padding-top: var(--space-5);
-    transition: background-color var(--checkout-form-expansion-duration) ease-out;
-    z-index: 1;
-}
-
-.App-Overview, .App-Payment {
-    padding: 0 var(--checkout-app-gutter-width) var(--space-5);
-    width: 100%;
-}
-
-.App-Overview>*, .App-Payment>* {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: var(--checkout-app-tablet-constraint);
-}
-
-.App-Footer {
-    padding-top: var(--checkout-app-gutter-width);
-}
-
-.App-Overview>*, .App-Payment>* {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: var(--checkout-app-tablet-constraint);
+.F-L8wL7C__EmailFormFieldGroup--readOnlyForm {
+    margin-top: 0;
 }
 
 .JOHDf_Xc__Footer {
@@ -1977,243 +2188,6 @@ audio {
     text-align: center;
 }
 
-.PaymentRequestOrHeader {
-    position: relative;
-}
-
-.ProductSummary, .ProductSummary-info {
-    -ms-flex-pack: center;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-justify-content: center;
-    justify-content: center;
-}
-
-.ProductSummary {
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    cursor: default;
-    text-align: center;
-}
-
-.AnimateSinglePresence {
-    --animateSinglePresenceDurationHeight: var(--transitionHeightDuration);
-    --animateSinglePresenceDelayHeight: 0s;
-    --animateSinglePresenceEnterDurationOpacity: var(--transitionHeightDuration);
-    --animateSinglePresenceExitDurationOpacity: var(--transitionHeightDuration);
-    --animateSinglePresenceEnterDelayOpacity: 0s;
-    --animateSinglePresenceExitDelayOpacity: 0s;
-    --animateSinglePresenceTimingFunction: var(--transitionHeightTimingFunction);
-}
-
-.AnimateSinglePresence {
-    position: relative;
-    transition: height var(--animateSinglePresenceDurationHeight) var(--animateSinglePresenceTimingFunction) var(--animateSinglePresenceDelayHeight);
-}
-
-.AnimatePresence {
-    --animatePresenceEnterDurationHeight: var(--transitionHeightDuration);
-    --animatePresenceEnterDelayHeight: 0s;
-    --animatePresenceExitDurationHeight: var(--transitionHeightDuration);
-}
-
-.AnimatePresence {
-    position: relative;
-}
-
-.ButtonContainer {
-    height: var(--button-height-xlg);
-    margin-bottom: var(--space-3);
-    position: relative;
-    width: 100%;
-}
-
-.ButtonAndDividerContainer .Divider {
-    padding-bottom: var(--space-4);
-    padding-top: var(--space-4);
-}
-
-.Divider {
-    margin-bottom: 8px;
-    margin-top: 8px;
-}
-
-.Divider {
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    overflow: hidden;
-    position: relative;
-}
-
-.ButtonAndDividerContainer {
-    opacity: 0;
-}
-
-.Divider-Text {
-    background-color: var(--checkout-white);
-    left: 50%;
-    padding: 0 var(--space-2);
-    position: absolute;
-    text-transform: uppercase;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    transition: background-color .3s ease-in-out .5s;
-    white-space: nowrap;
-}
-
-.ButtonAndDividerContainer, .PaymentHeaderContainer {
-    width: 100%;
-}
-
-container:first-child .PaymentMethodFormAccordionItem--compact.AccordionItem:first-child {
-    border-top: none;
-}
-
-.PaymentMethodFormAccordionItem--compact.AccordionItem:first-child {
-    border-top: var(--border);
-}
-
-.PaymentMethodFormAccordionItem.AccordionItem.PaymentMethodFormAccordionItem--overflowVisible {
-    overflow: visible;
-}
-
-.PaymentMethodFormAccordionItem.AccordionItem {
-    overflow: hidden;
-}
-
-.AccordionItemContent.PaymentMethodFormAccordionItem {
-    padding: 0 var(--space-4);
-}
-
-.AccordionItemContent--no-title {
-    padding-top: 0;
-}
-
-.AccordionItemContent {
-    padding: var(--space-4);
-    width: 100%;
-}
-
-.AccordionItemCover {
-    padding: var(--space-4);
-    width: 100%;
-}
-
-.AccordionItemCover-header {
-    position: relative;
-}
-
-.AccordionItemCover-label {
-    -ms-flex-align: start;
-    -webkit-align-items: flex-start;
-    align-items: flex-start;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    line-height: 18px;
-    width: 25%;
-}
-
-.PaymentMethodFormAccordionItem .AccordionItemCover-label {
-    display: none;
-}
-
-.mt5 {
-    margin-top: var(--space-5);
-}
-
-.width-grow {
-    -ms-flex-preferred-size: 0;
-    -ms-flex-positive: 1;
-    -webkit-flex-basis: 0;
-    flex-basis: 0;
-    -webkit-flex-grow: 1;
-    flex-grow: 1;
-}
-
-.AccordionItemHeader-content {
-    position: relative;
-    z-index: var(--checkout-z-index-accordion-item-content);
-}
-
-.AccordionItem--borderless, .AccordionItem:first-child {
-    border-top: none;
-}
-
-.AccordionItem {
-    transition: height .3s var(--accordion-item-height-transition-curve);
-}
-
-.AccordionItem-wrapper {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    position: relative;
-}
-
-h2 {
-    display: block;
-    font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-    unicode-bidi: isolate;
-}
-
-.ProductSummary-buttonsContainer:empty {
-    margin-top: 0;
-}
-
-.ProductSummary-buttonsContainer {
-    -ms-flex-pack: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    box-sizing: border-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    gap: var(--space-3);
-    -webkit-justify-content: center;
-    justify-content: center;
-    margin-top: var(--space-2);
-}
-
-.PaymentForm-form {
-    scroll-margin-top: calc(var(--checkout-app-gutter-width) + var(--button-height-xlg) + var(--space-5));
-    -webkit-transform: scaleY(1);
-    -ms-transform: scaleY(1);
-    transform: scaleY(1);
-    -webkit-transform-origin: top;
-    -ms-transform-origin: top;
-    transform-origin: top;
-    transition: opacity var(--checkout-form-expansion-duration) ease-out, -webkit-transform var(--checkout-form-expansion-duration) ease-out;
-    transition: opacity var(--checkout-form-expansion-duration) ease-out, transform var(--checkout-form-expansion-duration) ease-out;
-    transition: opacity var(--checkout-form-expansion-duration) ease-out, transform var(--checkout-form-expansion-duration) ease-out, -webkit-transform var(--checkout-form-expansion-duration) ease-out;
-}
-
-.App-Global-Fields {
-    margin-bottom: var(--space-2);
-}
-
 .wrap-wrap {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
@@ -2228,196 +2202,6 @@ h2 {
     padding: 8px;
 }
 
-.direction-column {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-}
-
-.FormFieldGroup-container {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    position: relative;
-}
-
-.ReadOnlyForm-container {
-    width: 100%;
-}
-
-.F-L8wL7C__EmailFormFieldGroup--readOnlyForm {
-    margin-top: 0;
-}
-
-.ReadOnlyForm {
-    background-color: var(--checkout-gray-light);
-    border-radius: var(--rounded);
-    margin: var(--space-1) 0 0 0;
-    width: 100%;
-}
-
-.ReadOnlyForm .ReadOnlyFormField:first-child {
-    border-top: none;
-}
-
-.ReadOnlyForm .ReadOnlyFormField {
-    border-top: var(--border);
-}
-
-.ReadOnlyFormField-container {
-    padding: var(--space-4);
-}
-
-.ReadOnlyFormField-contentContainer {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    min-width: 0;
-}
-
-.ReadOnlyFormField-label {
-    -ms-flex-negative: 0;
-    color: var(--checkout-gray500);
-    -webkit-flex-shrink: 0;
-    flex-shrink: 0;
-    font-size: 14px;
-    width: 30%;
-}
-
-.ReadOnlyFormField-titleContainer {
-    -ms-flex-pack: justify;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
-    min-width: 0;
-}
-
-.AccordionItemCover-titleContainer {
-    min-width: 0;
-}
-
-.PaymentMethodFormAccordionItem .AccordionItemCover-titleContainer {
-    width: 100%;
-}
-
-.AccordionItemCover-actionContainer {
-    height: 0;
-}
-
-.AccordionItemCover-actionContainer--noButton {
-    margin-left: 0;
-}
-
-.AccordionItemCover-actionContainer {
-    margin-left: var(--space-2);
-}
-
-.flex-item:empty {
-    display: none;
-}
-
-.ReadOnlyFormField-title {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    min-width: 0;
-}
-
-.ReadOnlyFormField-title {
-    color: var(--checkout-gray800);
-    font-size: 14px;
-    overflow: hidden;
-    padding-right: var(--space-2);
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.ReadOnlyFormField-action {
-    -ms-flex-preferred-size: auto;
-    -ms-flex-negative: 0;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-basis: auto;
-    flex-basis: auto;
-    -webkit-flex-shrink: 0;
-    flex-shrink: 0;
-    font-size: 12px;
-}
-
-.Accordion {
-    background-color: var(--checkout-white);
-    border-radius: var(--rounded);
-    box-shadow: var(--border-box-shadow);
-    margin: var(--space-1) 0 0 0;
-}
-
-.ConfirmPayment .SubmitButton {
-    transition: box-shadow .08s ease-in, -webkit-transform .15s ease;
-    transition: transform .15s ease, box-shadow .08s ease-in;
-    transition: transform .15s ease, box-shadow .08s ease-in, -webkit-transform .15s ease;
-}
-
-.SubmitButton {
-    --button-height: var(--button-height-xlg);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    border: 0;
-    border-radius: var(--rounded);
-    box-shadow: var(--submit-button-shadow);
-    color: var(--checkout-white);
-    cursor: pointer;
-    display: block;
-    height: var(--button-height);
-    outline: none;
-    overflow: hidden;
-    padding: 0;
-    position: relative;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    transition: all var(--default-transition), box-shadow .08s ease-in;
-    width: 100%;
-}
-
-.SubmitButton-Shimmer {
-    bottom: 0;
-    content: "";
-    height: 100%;
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    -webkit-transform: translateX(calc(var(--shimmer-width) * -1));
-    -ms-transform: translateX(calc(var(--shimmer-width)*-1));
-    transform: translateX(calc(var(--shimmer-width) * -1));
-    transition: opacity var(--default-transition);
-    width: var(--shimmer-width);
-}
-
-.SubmitButton--incomplete .SubmitButton-Text--current {
-    opacity: .6;
-}
-
-.SubmitButton-Text {
-    left: 0;
-    line-height: var(--button-height);
-    position: absolute;
-    text-align: center;
-    top: 0;
-    transition: all var(--default-transition);
-    width: 100%;
-}
 
 /* Book page */
 
