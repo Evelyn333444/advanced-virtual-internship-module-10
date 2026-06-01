@@ -36,6 +36,12 @@ const [bookMap, setBookMap] = useState([]);
 
     const [searchTerm, setSearchTerm] = useState("");
 
+    const filteredRecommended = recommended.filter((book) =>
+  book.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  (book.author && book.author.toLowerCase().includes(searchTerm.toLowerCase())) ||
+  (book.subTitle && book.subTitle.toLowerCase().includes(searchTerm.toLowerCase()))
+);
+
     const filteredSuggested = suggested.filter((book) =>
   book.title.toLowerCase().includes(searchTerm.toLowerCase())
     (book.author && book.author.toLowerCase().includes(searchTerm.toLowerCase())) ||
