@@ -4,8 +4,8 @@ const Search = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleSearch = (e) => {
-    e.preventDefault();
-    onSearch(searchTerm);
+  e.preventDefault();
+  onSearch?.(searchTerm);
   };
 
   return (
@@ -22,7 +22,11 @@ const Search = ({ onSearch }) => {
                   className="search__input"
                   placeholder="Search for books"
                   type="text"
-                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onChange={(e) => {
+  const value = e.target.value;
+  setSearchTerm(value);
+  onSearch?.(value);
+}}
                   value={searchTerm}
                 />
                 <button type="submit" className="search__icon" aria-label="Search">

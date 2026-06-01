@@ -36,8 +36,10 @@ const [bookMap, setBookMap] = useState([]);
 
     const [searchTerm, setSearchTerm] = useState("");
 
-    const filteredRecommended = recommended.filter((book) =>
+    const filteredSuggested = suggested.filter((book) =>
   book.title.toLowerCase().includes(searchTerm.toLowerCase())
+    (book.author && book.author.toLowerCase().includes(searchTerm.toLowerCase())) ||
+  (book.subTitle && book.subTitle.toLowerCase().includes(searchTerm.toLowerCase()))
 );
 
 useEffect(() => {
@@ -107,13 +109,13 @@ useEffect (() => {
             <div className="for-you__title">Suggested Books</div>
             <div className="for-you__sub--title">Browse those books</div>
             <div className="for-you__recommended--books">
-            <BookMap bookMap={suggested} loading={loading} />
-            <BookMap bookMap={suggested} loading={loading} />
-            <BookMap bookMap={suggested} loading={loading} />
-            <BookMap bookMap={suggested} loading={loading} />
-            <BookMap bookMap={suggested} loading={loading} />
-            <BookMap bookMap={suggested} loading={loading} />
-            <BookMap bookMap={suggested} loading={loading} />
+            <BookMap bookMap={filteredSuggested} loading={loading} />
+            <BookMap bookMap={filteredSuggested} loading={loading} />
+            <BookMap bookMap={filteredSuggested} loading={loading} />
+            <BookMap bookMap={filteredSuggested} loading={loading} />
+            <BookMap bookMap={filteredSuggested} loading={loading} />
+            <BookMap bookMap={filteredSuggested} loading={loading} />
+            <BookMap bookMap={filteredSuggested} loading={loading} />
                                     </div>
                                     </div>
                                     </div>
