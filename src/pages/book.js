@@ -37,7 +37,7 @@ const Book = () => {
         <>
         <div id="__next">
         <div className="wrapper">
-        <Search onSearch={setSearchTerm} />
+        <Search onSearch={setSearchTerm} handleLogout={() => {}} />
         <SideBar />
         <div className="row">
         <audio controls src={book.audioLink}></audio>

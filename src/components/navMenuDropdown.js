@@ -9,6 +9,7 @@ const NavMenuDropdown = ({ handleLogout = () => {} }) => {
     toggleMenu,
     closeMenu,
     toggleFullSidebar,
+    setShowFullSidebar,
   } = useSidebar();
   const menuRef = useRef(null);
 
@@ -66,9 +67,7 @@ const NavMenuDropdown = ({ handleLogout = () => {} }) => {
               className={`nav-menu__option ${!showFullSidebar ? 'nav-menu__option--active' : ''}`}
               role="menuitemcheckbox"
               aria-checked={!showFullSidebar}
-              onClick={() => {
-                if (showFullSidebar) toggleFullSidebar();
-              }}
+              onClick={() => setShowFullSidebar(false)}
             >
               <span className="nav-menu__option-check" aria-hidden="true">
                 {!showFullSidebar ? '✓' : ''}

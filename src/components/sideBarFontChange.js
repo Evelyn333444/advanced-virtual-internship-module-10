@@ -2,16 +2,15 @@ import logo from "../assets/logo.png";
 import { useSidebar } from '../context/sidebarContext';
 
 const SideBarFontChange = ({ handleLogout = () => { }, fontSize, setFontSize }) => {
-    const { isOpen, close } = useSidebar();
+    const { showFullSidebar } = useSidebar();
+
+    if (!showFullSidebar) {
+        return null;
+    }
 
     return (
         <>
-            <div
-                className={`sidebar__overlay ${isOpen ? '' : 'sidebar__overlay--hidden'}`}
-                onClick={close}
-                aria-hidden={!isOpen}
-            />
-            <aside className={`sidebar ${isOpen ? 'sidebar--open' : 'sidebar--closed'}`}>
+            <aside className="sidebar">
                 <div className="sidebar__logo">
                     <img alt="logo" src={logo} />
                 </div>

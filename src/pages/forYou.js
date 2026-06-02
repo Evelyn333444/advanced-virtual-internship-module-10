@@ -70,7 +70,7 @@ useEffect (() => {
   return (
     <div id="__next">
       <div className="wrapper">
-        <Search onSearch={setSearchTerm} />
+        <Search onSearch={setSearchTerm} handleLogout={handleLogout} />
         <SideBar handleLogout={handleLogout} />
         <div className="row">
           <div className="container">
