@@ -144,7 +144,7 @@ button:disabled {
 .nav__burger {
   display: none;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 5px;
   width: 44px;
