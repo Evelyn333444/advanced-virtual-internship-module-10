@@ -8,14 +8,14 @@ import Reviews from '../components/reviews'
 
 const Home = () => {
     return (
-        <>
+        <div className="home">
             <Nav />
             <Landing />
             <Features />
             <Numbers />
             <Reviews />
             <Footer />
-        </>
+        </div>
     )
 }
 
