@@ -38,6 +38,7 @@ const Book = () => {
         <div id="__next">
         <div className="wrapper">
         <Search onSearch={setSearchTerm} />
+        <SideBar />
         <div className="row">
         <audio controls src={book.audioLink}></audio>
         <div className="container">
@@ -135,7 +136,6 @@ const Book = () => {
                 </div>
                 </div>
                 </div>
-                <SideBar />
                 </div>
                 </div>
         </>

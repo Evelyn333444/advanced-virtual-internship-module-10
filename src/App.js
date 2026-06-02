@@ -1,4 +1,4 @@
-import { Routes, Route, useNavigate  } from 'react-router-dom';
+import { Routes, Route, useNavigate, Outlet } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { auth } from "./firebase";
 import { onAuthStateChanged, signOut } from 'firebase/auth';
@@ -9,12 +9,17 @@ import UpgradeToPremium from './pages/upgrade_to_premium';
 import SubscribeMonth from './pages/subscribeMonth';
 import SubscribeYear from './pages/subscribeYear';
 import './style.css';
+import { SidebarProvider } from './context/sidebarContext';
 import Loginhandler from './components/LoginHandler'
 import SignUpHandler from './components/signUpHandler'
-import Sidebar from './components/sideBar'
 import Book from './pages/book';
 import ReadButtonSummary from './pages/readButtonSummary';
 
+const SidebarLayout = () => (
+  <SidebarProvider>
+    <Outlet />
+  </SidebarProvider>
+);
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -33,23 +38,26 @@ const App = () => {
     });
 };
 
+  const loggedInRoutes = (
+    <>
+      <Route path="/" element={<ForYou user={user} handleLogout={handleLogout} />} />
+      <Route path="/settings" element={<Settings handleLogout={handleLogout} />} />
+      <Route path="/choose-plan" element={<UpgradeToPremium />} />
+      <Route path="/subscribe-month" element={<SubscribeMonth />} />
+      <Route path="/subscribe-year" element={<SubscribeYear />} />
+      <Route path="/foryou" element={<ForYou user={user} handleLogout={handleLogout} />} />
+      <Route path="/book/:id" element={<Book />} />
+      <Route path="/summary/:id" element={<ReadButtonSummary />} />
+    </>
+  );
+
   return (
     <div className="App">
       <Routes>
         {user ? (
-          <>
-            <Route path="/" element={<ForYou user={user} handleLogout={handleLogout} />} />
-            <Route path="/settings" element={<Settings handleLogout={handleLogout} />} />
-            <Route path="/choose-plan" element={<UpgradeToPremium />} />
-            <Route path="/subscribe-month" element={<SubscribeMonth />} />
-            <Route path="/subscribe-year" element={<SubscribeYear />} />
-            <Route path="/foryou" element={<ForYou user={user} handleLogout={handleLogout} />} />
-            <Route path="/book/:id" element={<Book />} />
-            <Route path="/summary/:id" element={<ReadButtonSummary />} />
-            <Route path="/settings" element={<Settings />} />
-
-
-          </>
+          <Route element={<SidebarLayout />}>
+            {loggedInRoutes}
+          </Route>
         ) : (
           <Route path="/" element={<Home />} />
         )}

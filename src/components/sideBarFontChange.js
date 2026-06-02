@@ -1,12 +1,17 @@
 import logo from "../assets/logo.png";
-import React, { useState } from 'react';
+import { useSidebar } from '../context/sidebarContext';
 
 const SideBarFontChange = ({ handleLogout = () => { }, fontSize, setFontSize }) => {
-
+    const { isOpen, close } = useSidebar();
 
     return (
         <>
-            <div className="sidebar sidebar--closed">
+            <div
+                className={`sidebar__overlay ${isOpen ? '' : 'sidebar__overlay--hidden'}`}
+                onClick={close}
+                aria-hidden={!isOpen}
+            />
+            <aside className={`sidebar ${isOpen ? 'sidebar--open' : 'sidebar--closed'}`}>
                 <div className="sidebar__logo">
                     <img alt="logo" src={logo} />
                 </div>
@@ -124,7 +129,7 @@ const SideBarFontChange = ({ handleLogout = () => { }, fontSize, setFontSize }) 
                         </div>
                     </div>
                 </div>
-            </div>
+            </aside>
         </>
     );
 };
