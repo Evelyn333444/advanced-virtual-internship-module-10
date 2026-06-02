@@ -6,39 +6,54 @@ const Nav = () => {
     const [ showLogin, setShowLogin ] = useState(false)
     const [ menuOpen, setMenuOpen ] = useState(false)
 
+    const closeMenu = () => setMenuOpen(false)
+
     const openLogin = () => {
         setShowLogin(true)
-        setMenuOpen(false)
+        closeMenu()
     }
 
     return (
-        <>
+        <nav className={`nav ${menuOpen ? 'nav--open' : ''}`}>
             <div className="nav__wrapper">
                 <figure className="nav__img--mask">
-                    <img src={logo} alt="logo" />
+                    <img className="nav__img" src={logo} alt="Summarist logo" />
                 </figure>
+
                 <button
                     type="button"
-                    className={`nav__burger ${menuOpen ? 'nav__burger--open' : ''}`}
+                    className="nav__burger"
                     aria-label={menuOpen ? 'Close menu' : 'Open menu'}
                     aria-expanded={menuOpen}
                     onClick={() => setMenuOpen((open) => !open)}
                 >
-                    <span className="nav__burger-line" />
-                    <span className="nav__burger-line" />
-                    <span className="nav__burger-line" />
+                    <span />
+                    <span />
+                    <span />
                 </button>
-                <ul className={`nav__list--wrapper ${menuOpen ? 'nav__list--wrapper--open' : ''}`}>
+
+                <ul className="nav__list--wrapper">
                     <li className="nav__list nav__list--login" onClick={openLogin}>
                         Login
                     </li>
-                    <li className="nav__list nav__list--mobile">About</li>
-                    <li className="nav__list nav__list--mobile">Contact</li>
-                    <li className="nav__list nav__list--mobile">Help</li>
+                    <li className="nav__list">About</li>
+                    <li className="nav__list">Contact</li>
+                    <li className="nav__list">Help</li>
                 </ul>
+
+                { menuOpen && (
+                    <button
+                        type="button"
+                        className="nav__backdrop"
+                        aria-label="Close menu"
+                        onClick={closeMenu}
+                    />
+                ) }
+
                 { showLogin && <LoginToggle onClose={() => setShowLogin(false)} /> }
             </div>
-        </>
+        </nav>
     )
 }
+
 export default Nav
