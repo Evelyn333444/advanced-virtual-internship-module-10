@@ -50,12 +50,12 @@ const [bookMap, setBookMap] = useState([]);
 
 useEffect(() => {
         const fetchBooks = async () => {
-            // Simulating a fetch call
-            setTimeout(() => {
-                // This would be replaced with your actual fetch call
-                setBookMap([{ id: 1, title: "Book Title", author: "Author Name", imageLink: "image.jpg" }]);
-                setLoading(false);
-            }, 2000); // Simulating a 2-second loading time
+          // Simulating a fetch call
+          setTimeout(() => {
+            // This would be replaced with your actual fetch call
+            setBookMap([{ id: 1, title: "Book Title", author: "Author Name", imageLink: "image.jpg" }]);
+            setLoading(false);
+          }, 700); // Shorter loading time (700ms)
         };
 
         fetchBooks();

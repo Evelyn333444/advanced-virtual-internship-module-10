@@ -1262,6 +1262,20 @@ search, .search__input--wrapper {
   }
 }
 
+/* On very small screens, force the sidebar hidden even when layout--full-sidebar is toggled */
+@media (max-width: 576px) {
+  .layout--full-sidebar .sidebar {
+    display: none !important;
+  }
+}
+
+/* Also hide the sidebar when the viewport is 768px or smaller */
+@media (max-width: 768px) {
+  .layout--full-sidebar .sidebar {
+    display: none !important;
+  }
+}
+
 .section__title.page__title {
     text-align: left;
     border-bottom: 1px solid #e1e7ea;

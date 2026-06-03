@@ -31,7 +31,7 @@ const getUserEmailFromAPI = async () => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve('user@example.com'); // Mock email
-        }, 1000);
+        }, 700); // Shorter simulated API delay (700ms)
     });
 };
 
