@@ -9,6 +9,9 @@ function readSidebarPreference() {
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored !== null) {
+      if (window.matchMedia('(min-width: 992px)').matches) {
+        return true;
+      }
       return stored === 'true';
     }
   } catch {
@@ -30,6 +33,60 @@ export function SidebarProvider({ children }) {
     document.body.classList.toggle('layout--full-sidebar', showFullSidebar);
     return () => document.body.classList.remove('layout--full-sidebar');
   }, [showFullSidebar]);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 991px)');
+    const handleResize = (event) => {
+      if (event.matches) {
+        setShowFullSidebar(false);
+      }
+    };
+
+    if (mediaQuery.matches) {
+      setShowFullSidebar(false);
+    }
+
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener('change', handleResize);
+    } else {
+      mediaQuery.addListener(handleResize);
+    }
+
+    return () => {
+      if (mediaQuery.removeEventListener) {
+        mediaQuery.removeEventListener('change', handleResize);
+      } else {
+        mediaQuery.removeListener(handleResize);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    const desktopQuery = window.matchMedia('(min-width: 992px)');
+    const handleDesktopResize = (event) => {
+      if (event.matches) {
+        setShowFullSidebar(true);
+      }
+    };
+
+    if (desktopQuery.matches) {
+      setShowFullSidebar(true);
+    }
+
+    if (desktopQuery.addEventListener) {
+      desktopQuery.addEventListener('change', handleDesktopResize);
+    } else {
+      desktopQuery.addListener(handleDesktopResize);
+    }
+
+    return () => {
+      if (desktopQuery.removeEventListener) {
+        desktopQuery.removeEventListener('change', handleDesktopResize);
+      } else {
+        desktopQuery.removeListener(handleDesktopResize);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     try {

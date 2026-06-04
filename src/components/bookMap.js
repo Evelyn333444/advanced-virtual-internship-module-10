@@ -4,7 +4,7 @@ import Skeleton from "./skeleton";
 
 const BookMap = ({ bookMap, loading }) => {
   if (loading) {
-    return <Skeleton />;
+    return <Skeleton type="card-list" />;
   }
 
   return (
