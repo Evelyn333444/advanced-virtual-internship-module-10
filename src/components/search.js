@@ -15,7 +15,6 @@ const Search = ({ onSearch, handleLogout }) => {
         <figure>
           <img src="logo" alt="" />
         </figure>
-        <NavMenuDropdown handleLogout={handleLogout} />
         <div className="search__content">
           <div className="search">
             <div className="search__input--wrapper">
@@ -41,6 +40,7 @@ const Search = ({ onSearch, handleLogout }) => {
               </form>
             </div>
           </div>
+          <NavMenuDropdown handleLogout={handleLogout} />
         </div>
       </div>
     </div>
