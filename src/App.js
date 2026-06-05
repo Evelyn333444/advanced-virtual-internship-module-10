@@ -14,11 +14,19 @@ import Loginhandler from './components/LoginHandler'
 import SignUpHandler from './components/signUpHandler'
 import Book from './pages/book';
 import ReadButtonSummary from './pages/readButtonSummary';
+import Library from './pages/library';
 
 const SidebarLayout = () => (
   <SidebarProvider>
     <Outlet />
   </SidebarProvider>
+);
+
+const loggedInRoutes = (
+  <>
+    {/* ... other routes */}
+    <Route path="/library" element={<Library user={user} handleLogout={handleLogout} />} />
+  </>
 );
 
 const App = () => {

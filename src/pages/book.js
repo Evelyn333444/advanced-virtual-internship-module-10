@@ -13,6 +13,24 @@ const Book = () => {
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
 
+  const [isBookSaved, setIsBookSaved] = useState(false);
+
+useEffect(() => {
+  const savedBooks = JSON.parse(localStorage.getItem('savedBooks')) || [];
+  setIsBookSaved(savedBooks.some(savedBook => savedBook.id === id));
+}, [id]);
+
+const toggleSaveBook = () => {
+  let savedBooks = JSON.parse(localStorage.getItem('savedBooks')) || [];
+  if (isBookSaved) {
+    savedBooks = savedBooks.filter(savedBook => savedBook.id !== id);
+  } else {
+    savedBooks.push(book);
+  }
+  localStorage.setItem('savedBooks', JSON.stringify(savedBooks));
+  setIsBookSaved(!isBookSaved);
+};
+
 
     useEffect(() => {
     async function fetchBook() {
