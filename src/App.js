@@ -16,18 +16,13 @@ import Book from './pages/book';
 import ReadButtonSummary from './pages/readButtonSummary';
 import Library from './pages/library';
 
+
 const SidebarLayout = () => (
   <SidebarProvider>
     <Outlet />
   </SidebarProvider>
 );
 
-const loggedInRoutes = (
-  <>
-    {/* ... other routes */}
-    <Route path="/library" element={<Library user={user} handleLogout={handleLogout} />} />
-  </>
-);
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -56,6 +51,7 @@ const App = () => {
       <Route path="/foryou" element={<ForYou user={user} handleLogout={handleLogout} />} />
       <Route path="/book/:id" element={<Book />} />
       <Route path="/summary/:id" element={<ReadButtonSummary />} />
+      <Route path="/library" element={<Library user={user} handleLogout={handleLogout} />} />
     </>
   );
 
